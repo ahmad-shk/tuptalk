@@ -1,0 +1,107 @@
+'use client'
+
+import React, { useState } from 'react';
+
+function HomeHero() {
+    const [value, setValue] = useState(50); // Initial value
+
+    const handleChange = (e) => {
+    setValue(parseInt(e.target.value, 10));
+  };
+    return (
+        <>
+            <div className='px-[80px] flex max-w-[1600px] m-auto'>
+                <div className="hero-left w-[50%] pt-[100px] bg-[]">
+                    <p className='font-Inter font-[600] italic pr-[30px] text-[26px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
+                    <div className=' bg-[] '>
+                        <img className='translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
+                        <div className='translate-y-[-100%] translate-x-[-11%] z-[10] relative'>
+                            <div className='h-[48px] w-[220px] gradient-bg rounded-[14px] flex items-center justify-center'>
+                                <button className='h-[44px] text-black font-poppins w-[216px] text-[30px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
+                            </div>
+                            <button className='h-[48px] mt-[10px] w-[220px] font-poppins text-[30px] text-white gradient-bg rounded-[14px]'>CONTRACT</button>
+                            <div className='flex items-center w-[220px] justify-center mt-[10px]'>
+                                <img className='cursor-pointer' src="/assets/twitter.svg" alt="" />
+                                <img className='cursor-pointer' src="/assets/telegram.svg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="hero-right w-[50%] flex justify-center">
+                    <div className='bg-[#F5F8FA] rounded-[30px] h-[800px] w-[88%] buy-tupl-shadow mt-[45px] py-[40px] px-[30px]'>
+                        <div className='flex gap-[20px] justify-center items-center bg-[]'>
+                            <p className='font-poppins font-[700] text-[32px] gradient-text'>Stage 1:</p>
+                            <p className='font-poppins font-[400] text-[32px] gradient-text'>BUY TUPL NOW</p>
+                        </div>
+                        <p className='text-[#999C9F] font-Inter text-[19px] mt-[24px] text-center'>until price increase</p>
+                        <div className='flex items-center justify-between mt-[24px]'>
+                            <p className='font-[400] font-poppins text-[14px] text-[#999C9F]'>Current price: <span className='font-popins font-[700] text-[14px]'>$0.005625</span></p>
+                            <p className='font-[400] font-poppins text-[14px] text-[#999C9F]'>Next stage price: <span className='font-popins font-[700] text-[14px]'>$0.006</span></p>
+                        </div>
+                        <div className='range-container'>
+                            <div className="flex flex-col mt-[24px] rounded-[66px] h-[16px] items-center w-full bg-[#D8D8D8] ">
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value={value}
+                                    onChange={handleChange}
+                                    className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none cursor-pointer"
+                                    style={{
+                                        background: `linear-gradient(270deg, #6546C7 0%, #D339D5 100%) no-repeat`,
+                                        backgroundSize: `${value}% 100%`,
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <p className='font-[400] mt-[20px] font-poppins text-[14px] text-center text-[#999C9F]'>Raised: <span className='font-popins font-[700] text-[14px]'>$12,474,042.377</span></p>
+                        <div className='flex justify-center'>
+                            <div className='bg-[#6388C9] mt-[20px] h-[1px] w-[90%]'></div>
+                        </div>
+                        <p className='font-[400] mt-[24px] font-poppins text-[14px] text-center text-[#000000]'>1 TUPL = <span className='font-popins font-[400] text-[14px] gradient-text'>$0.005626</span></p>
+                        <div className='flex justify-center gap-[30px] mt-[24px]'>
+                            <button className='h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] text-[white] bg-[#7165EA]'> <img className='h-[24px]' src="/assets/eth.svg" alt="" />ETH</button>
+                            <button className='h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
+                        </div>
+                        <div className='mt-[24px] flex items-center justify-center gap-[20px]'>
+                            <div className='h-[1px] w-[25%] bg-[#999C9F]'></div>
+                            <p className='font-popins font-[700] text-[14px] text-[#999C9F]'>ETH Balance: 0.00000</p>
+                            <div className='h-[1px] w-[25%] bg-[#999C9F]'></div>
+                        </div>
+                        <div className='flex justify-center gap-[30px] mt-[40px]'>
+                            <div>
+                                <p className='font-popins font-[700] text-[14px] mb-[3px] text-[#999C9F]'>Pay with ETH</p>
+                                <div className='h-[37px] w-[150px] flex items-center px-[10px] justify-between gap-[5px] rounded-[5px] border-[1px] border-[#9A9A9A] bg-[white]'>
+                                    <input className='w-[70%] placeholder-black outline-none border-none' placeholder='0' type="text" />
+                                    <img className='h-[24px]' src="/assets/eth.svg" alt="" />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='font-popins font-[700] text-[14px] mb-[3px] text-[#999C9F]'>Receive TUPL</p>
+                                <div className='h-[37px] w-[150px] flex items-center px-[10px] justify-between gap-[5px] rounded-[5px] bg-[white] border-[#9A9A9A] border-[1px]'>
+                                    <input className='w-[70%] placeholder-black outline-none border-none' placeholder='0' type="text" />
+                                    <img className='h-[24px]' src="/assets/eth.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <button className='h-[54px] w-[100%] mt-[100px] gradient-bg rounded-[10px] flex items-center justify-center gap-[10px]'>
+                            <img className='h-[20px]' src="/assets/walleticon.svg" alt="" />
+                            <p className='text-[20px] font-poppins'>CONNECT WALLET</p>
+                        </button>
+                        <div className='flex justify-center'>
+                            <div className='bg-[#999C9F] mt-[18px] h-[1px] w-[90%]'></div>
+                        </div>
+                        <div className='flex iten-center mt-[30px] cursor-pointer justify-center gap-[8px]'>
+                            <img src="/assets/iicon.svg" alt="" />
+                            <p className='text-[18px] text-[#7072A6]'>How To Buy</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </>
+    );
+}
+
+export default HomeHero;

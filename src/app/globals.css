@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.nav-shadow{
+  box-shadow: 0px 4px 18px 8px rgba(0, 0, 0, 0.25);
+}
+
+.button-border{
+  border: 2px solid transparent; /* Set a transparent border */
+  border-image-source: linear-gradient(90deg, #6146C7 0%, #E837D1 100%); /* Gradient border */
+  border-image-slice: 1; /* Ensures the gradient is applied to the border */
+  border-radius: 14px; 
+}
+.buy-tupl-shadow{
+  box-shadow: 0px 4px 7.6px 0px rgba(0, 0, 0, 0.25);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #6246C7 0%, #E037D6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(90deg, #DC27AA 0%, #7525BF 100%);
+  color: white;
+}
+
+.bg-radial {
+  background: radial-gradient(32.31% 32.31% at 46.67% 100%, #A33AB9 0%, #535298 100%);
+}
+
+.faq-shadow {
+  box-shadow: 0px 5px 16px 0px #080F340F;
+}
+
+.faq-button-shadow {
+  box-shadow: 0px 5px 16px 0px #080F340F;
+}
+
+.how-to-buy-step-bg{
+  background-color:rgba(246, 244, 252, 0.8) ;
+}
+
+.faq-button-shadow {
+  box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* appearance: none; */
+  /* display: none; */
+  opacity: 0;
+}
+input[type="range"]::-moz-range-thumb {
+  /* appearance: none; */
+  /* display: none; */
+  opacity: 0;
+}
+
