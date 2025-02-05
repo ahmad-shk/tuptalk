@@ -83,7 +83,7 @@ function HomeRoadmap() {
                 <div className="roadmap-upper h-[350px] flex">
                     <div className="roadmap-upper-left h-[100%] w-[50%] bg-[]">
                         <img className='' src="/assets/roadmapleftimg.svg" alt="" />
-                        <p className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px]'>ROADMAP</p>
+                        <p className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px]'>FEATURES</p>
                     </div>
                     <div className="roadmap-upper-right h-[100%] w-[50%] flex items-center bg-[]">
                         <p className='text-[24px] font-[600] font-poppins leading-[45px]'>Tuptalk is decentralized and allows users to earn cryptocurrency rewards through active participation, fostering a vibrant, engaged community. It offers content creators a transparent and fair social media experience.</p>
