@@ -11,7 +11,7 @@ function page() {
             <div className='h-[48px] w-[220px] mt-[30px] m-auto gradient-bg rounded-[14px] flex items-center justify-center'>
                 <button className='h-[44px] text-black font-poppins w-[216px] text-[30px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
             </div>
-            <p className='mt-[105px] text-[24px] text-center font-[400] font-poppins'>Import your TUPL Tokens to your MetaMask or TrustWallet</p>
+            <p className='mt-[105px] text-[24px] text-center font-[400] font-poppins'>Import your Lightchain AI Tokens to your MetaMask or TrustWallet</p>
             <div className="wallet-container flex px-[8%] gap-[50px] mt-[80px]">
                 <div className="metamask w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
                     <p className='font-poppins font-[600] text-[24px] text-center mb-[90px]'>Import process using MetaMask</p>

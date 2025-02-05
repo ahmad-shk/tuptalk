@@ -36,7 +36,9 @@ function NavBar() {
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/faq" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
           <img className='h-[40px] cursor-pointer' src="/assets/connectwallet.svg" alt="" />
+          <Link href="/dashboard">
           <img className='h-[40px] cursor-pointer' src="/assets/profileicon.svg" alt="" />
+          </Link>
         </div>
       </div>
     </>
