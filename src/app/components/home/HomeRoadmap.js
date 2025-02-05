@@ -79,7 +79,7 @@ function HomeRoadmap() {
                 <div className='flex justify-center mt-[80px]'>
                 <img src="/assets/upline.svg" alt="" />
             </div>
-            {/* <div className='mt-[80px] px-[80px]'>
+            <div className='mt-[80px] px-[80px]'>
                 <div className="roadmap-upper h-[350px] flex">
                     <div className="roadmap-upper-left h-[100%] w-[50%] bg-[]">
                         <img className='' src="/assets/roadmapleftimg.svg" alt="" />
@@ -97,7 +97,7 @@ function HomeRoadmap() {
                         <img className='scale-[1.5]' src="/assets/roadmaprightimg.svg" alt="" />
                     </div>
                 </div>
-            </div> */}
+            </div>
         </>
     );
 }
