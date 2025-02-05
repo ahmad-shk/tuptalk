@@ -78,7 +78,7 @@ function HomeRoadmap() {
                 <HomeMarque/>
                 <div className='flex items-center flex-col mt-[80px]'>
                 <img src="/assets/upline.svg" alt="" />
-                <p className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px]'>ROADMAP</p>
+                <p className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px]'>FEATURES</p>
             </div>
             <div className='mt-[80px] px-[80px]'>
                 <div className="roadmap-upper h-[350px] flex">
