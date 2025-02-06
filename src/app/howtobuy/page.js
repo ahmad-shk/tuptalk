@@ -93,7 +93,7 @@ function page() {
           ))}
       {/* <p className='font-[600] mt-[50px] w-[80%] text-[25px] mt-[20px]'>By following 2 simple steps, you can secure your TUPL tokens during this exclusive presale phase.</p> */}
         </div>
-
+{/* a */}
       </div>
       <Footer mt={"200px"} />
     </div>

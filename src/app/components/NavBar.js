@@ -9,7 +9,8 @@ function NavBar() {
   return (
     <>
       <div className=' nav-shadow h-[100px] flex items-center justify-between px-[30px]'>
-        <Link href="/"><div className='flex items-center gap-[10px]'>
+        <Link href="/">
+        <div className='flex items-center gap-[10px]'>
           <img className='h-[80px]' src="/assets/weblogo.svg" alt="" />
           <img className='h-[17px]' src="/assets/logotext.svg" alt="" />
         </div>

@@ -6,17 +6,19 @@ import HomeMarque from './components/home/HomeMarque';
 import HomeTokenomics from './components/home/HomeTokenomics';
 import Faqs from './components/home/Faqs';
 import Footer from './components/Footer';
+import HomeBottomSection from './components/home/HomeBottomSection';
 
 function page() {
   return (
     <>
-      <NavBar/>
-      <HomeHero/>
-      <HomeRoadmap/>
-      <HomeTokenomics/>
-      <Faqs/>
-      <Footer mt={"400px"}/>
-      
+      <NavBar />
+      <HomeHero />
+      <HomeRoadmap />
+      <HomeTokenomics />
+      <Faqs />
+      <HomeBottomSection/>
+      <Footer mt={"400px"} />
+
     </>
   );
 }
