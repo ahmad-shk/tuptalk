@@ -17,7 +17,7 @@ function page() {
       <HomeTokenomics />
       <Faqs />
       <HomeBottomSection/>
-      <Footer mt={"400px"} />
+      <Footer mt={"200px"} />
 
     </>
   );

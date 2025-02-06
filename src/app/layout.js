@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 
         {/* </Head> */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >
         {children}
       </body>
