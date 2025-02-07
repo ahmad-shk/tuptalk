@@ -14,6 +14,8 @@ function page() {
     <>
         <div>
             <NavBar/>
+            <div className='pt-[80px]'>
+
             <PageHeader heading={"FREQUENTLY ASKED QUESTIONS"} subheading={"FAQs"}/>
             <div className="questions-container mt-[60px]">
         {[
@@ -55,6 +57,7 @@ function page() {
         ))}
       </div>
       <Footer mt={"200px"}/>
+            </div>
         </div>
     </>
   );

@@ -118,6 +118,11 @@ input[type="range"]::-moz-range-thumb {
 
 /* ============= Responsive Styles ============= */
 
+@media screen and (max-width: 750px) {
+.page-header-home-text{
+  padding-bottom: 10px;
+}
+}
 @media screen and (max-width: 850px) {
 .nav-logo-1{
   height: 60px !important;
@@ -253,8 +258,8 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .page-header-home {
-    margin-top: -6px;
-    margin-bottom: 6px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
 }
@@ -271,8 +276,8 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .page-header-home {
-    margin-top: -5px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
 }
@@ -740,6 +745,16 @@ input[type="range"]::-moz-range-thumb {
 /* ===== How to buy ===== */
 
 /* ===== Dashboard ===== */
+@media screen and (max-width: 800px) {
+.dashboard-tupl-price{
+  font-size: 28px;
+}
+}
+@media screen and (max-width: 600px) {
+.dashboard-tupl-price{
+  font-size: 24px;
+}
+}
 @media screen and (max-width: 950px) {
   .dashboard-table-container {
     width: 95%;
@@ -1139,12 +1154,12 @@ input[type="range"]::-moz-range-thumb {
     width: 95%;
   }
 }
-@media screen and (max-width: 520px) {
-  .footer-links-container{
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+@media screen and (max-width: 600px) {
+ 
+    .footer-last-two-links{
+      display: none;
+    }
+
   .footer-wrapper{
     height: 100%;
   }

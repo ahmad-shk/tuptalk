@@ -25,6 +25,7 @@ function page() {
     return (
         <div>
             <NavBar />
+            <div className='pt-[80px]'>
             <PageHeader heading={"TOKENOMICS"} subheading={"Tokenomics"} />
             <p className='font-[400] font-poppins mt-[30px]  text-[24px] token-heading docs-heading docs-main-heading leading-[36px] text-[black] text-center w-[60%] m-auto'>Tuptalk tokenomics is designed to ensure sustainability, equitable distribution, and long-term value for its ecosystem participants.</p>
             <div className="points-container px-[70px] mt-[120px]">
@@ -45,6 +46,7 @@ function page() {
       ))}
     </div>
     <Footer mt={"200px"} />
+        </div>
         </div>
     );
 }

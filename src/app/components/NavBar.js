@@ -9,7 +9,7 @@ function NavBar() {
   const [value, setValue] = useState(true);
   return (
     <>
-      <div className=' nav-shadow h-[80px] flex items-center justify-between px-[30px]'>
+      <div className=' nav-shadow h-[80px] fixed top-[0] w-[100%] bg-[white] duration-500 z-[12] flex items-center justify-between px-[30px]'>
         <Link href="/">
         <div className='flex items-center nav-logo-container gap-[10px]'>
           <img className=' nav-logo-1 h-[60px]' src="/assets/weblogo.svg" alt="" />
@@ -46,8 +46,9 @@ function NavBar() {
           </div>
         </div>
       </div>
-      <div className={`w-[280px] bg-[white] mobile-nav-shadow ${value ? 'translate-x-[100%] hidden' : 'translate-x-[0%] block'} duration-500 z-[99] px-[15px] py-[12px] absolute h-[100vh] overflow-auto right-[0px] top-[0px]`}>
-          <p className='font-[600] text-[30px]' onClick={()=>{setValue(!value)}}>X</p>
+      <div className={`w-[280px] bg-[white] mobile-nav-shadow ${value ? 'translate-x-[100%] hidden' : 'translate-x-[0%] block'} duration-700 z-[99] px-[15px] py-[12px] absolute h-[100vh] overflow-auto right-[0px] top-[0px]`}>
+          {/* <p className='font-[600] text-[30px]' onClick={()=>{setValue(!value)}}>X</p> */}
+          <div className='h-[35px] w-[35px] rounded-[50%] bg-[#738DED] text-[20px] font-[500] flex items-center justify-center text-white  mt-[10px] ' onClick={() => { setValue(!value) }}>X</div>
           <div className='flex flex-col justify-center items-center mt-[20px] gap-[27px]'>
           <Link className='' href="/howtobuy">
           <p className='hover:scale-[1.05] duration-300 font-[400] text-[20px] font-Poppins'>HOW TO BUY</p>

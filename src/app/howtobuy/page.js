@@ -65,7 +65,7 @@ function page() {
   return (
     <div>
       <NavBar />
-      <div>
+      <div className='pt-[80px]'>
         <PageHeader heading={"HOW TO BUY"} subheading={"How to buy"} />
         <div className="steps-container px-[130px] pt-[50px]">
           <p className='font-[600] how-to-buy-heading text-[30px]'>How to Buy  Tuptalk Tokens (TUPL) During the Presale</p>

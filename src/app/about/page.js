@@ -7,6 +7,7 @@ function page() {
   return (
     <div>
       <NavBar/>
+      <div className='pt-[80px]'>
       <PageHeader heading={"ABOUT US"} subheading={"About us"}/>
       <div className="about-inner-upper-container flex px-[80px] mt-[70px]">
         <div className="upper-left w-[55%]">
@@ -27,6 +28,7 @@ function page() {
         </div>
       </div>
       <Footer mt={"200px"} />
+      </div>
     </div>
   );
 }

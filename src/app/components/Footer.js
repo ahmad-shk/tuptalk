@@ -9,8 +9,8 @@ function Footer(props) {
           <Link href="/howtobuy"><p className='text-white font-[400] font-dmsans text-[15px]'>How to buy</p></Link>
           <Link href="/tokenomics"><p className='text-white font-[400] font-dmsans text-[15px]'>Tokenomics</p></Link>
           <Link href="/docs"><p className='text-white font-[400] font-dmsans text-[15px]'>Docs</p></Link>
-          <Link href="/about"><p className='text-white font-[400] font-dmsans text-[15px]'>About</p></Link>
-          <Link href="/faq"><p className='text-white font-[400] font-dmsans text-[15px]'>FAQs</p></Link>
+          <Link className='footer-last-two-links' href="/about"><p className='text-white font-[400] font-dmsans text-[15px]'>About</p></Link>
+          <Link className='footer-last-two-links' href="/faq"><p className='text-white font-[400] font-dmsans text-[15px]'>FAQs</p></Link>
         </div>
         <div className='flex justify-center gap-[30px] pt-[50px]'>
           <img className='cursor-pointer hover:scale-[1.3] duration-300' src="/assets/footerdiscordicon.svg" alt="" />

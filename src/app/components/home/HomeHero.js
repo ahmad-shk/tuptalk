@@ -10,12 +10,12 @@ function HomeHero() {
   };
     return (
         <>
-            <div className='px-[80px] home-wrapper flex max-w-[1600px] m-auto'>
+            <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto'>
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
                     <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[26px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
                     <div className=' bg-[] relative '>
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
-                        <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[10] relative'>
+                        <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
                             <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center'>
                                 <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
                             </div>

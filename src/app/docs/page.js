@@ -7,6 +7,7 @@ function page() {
     return (
         <div>
             <NavBar />
+            <div className='pt-[80px]'>
             <PageHeader heading={"DOCS"} subheading={"Docs"} />
             <div className='h-[48px] w-[220px] mt-[30px] m-auto docs-whitepaper  gradient-bg rounded-[14px] flex items-center justify-center'>
                 <button className='h-[44px] text-black font-poppins w-[216px] text-[30px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
@@ -189,6 +190,7 @@ function page() {
                 </div>
             </div>
             <Footer mt={"200px"} />
+        </div>
         </div>
     );
 }

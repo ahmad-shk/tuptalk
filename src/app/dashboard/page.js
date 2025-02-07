@@ -11,7 +11,7 @@ function page() {
   return (
     <div className=''>
       <DashboardNav setValue={setValue} value={value}/>
-      <div className=' bg-[] dashboard-inner w-[100%] pt-[30px] flex' style={{height: "calc(100vh - 100px)"}}>
+      <div className=' bg-[] dashboard-inner w-[100%] pt-[0px] flex' style={{height: "calc(100vh - 100px)"}}>
       <div className={`sidebar dashboard-sidebar-2 w-[315px] scrollnone overflow-y-scroll duration-700 pr-[14px] bg-[]`} >
         <div className='h-[52px] rounded-r-[20px] pl-[20px] bg-[#EFEFFE] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
             <img className='h-[18px]' src="/assets/dashboardicon.svg" alt="" />
@@ -49,6 +49,7 @@ function page() {
         </div>
       </div>
       <div className={`sidebar dashboard-sidebar scrollnone w-[240px] ${value ? 'translate-x-[-100%]' : 'translate-x-[0%]'} absolute z-[10] bg-[white] overflow-y-scroll duration-700 bg-[]`} style={{height: "calc(100vh - 100px)"}}>
+      <div className='h-[30px] w-[30px] rounded-[50%] bg-[#738DED] text-[20px] font-[500] flex items-center justify-center text-white absolute top-[10px] right-[10px]' onClick={() => { setValue(!value) }}>X</div>
         <div className='h-[52px] rounded-r-[20px] pl-[20px] bg-[#EFEFFE] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
             <img className='h-[18px]' src="/assets/dashboardicon.svg" alt="" />
             <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Dashboard</p>
@@ -112,7 +113,7 @@ function page() {
       <div className='w-[80%] dashboard-table-container pb-[80px] m-auto bg-[white] translate-y-[-70px]'>
       <div className='w-[325px] rounded-br-[100px] bg-[#F5F8FA] py-[20px] px-[20px]'>
       <div className='h-[70px] w-[70px] rounded-[50%] bg-[white] flex items-center justify-center'><img src="/assets/dashboardmadel.svg" alt="" /></div>
-      <p className='font-[700] mt-[10px] text-[32px] font-poppins flex items-center gap-[10px]'>O <span className='font-[400] text-[32px] font-poppins'>TUPL</span></p>
+      <p className='font-[700] mt-[10px] text-[32px] dashboard-tupl-price font-poppins flex items-center gap-[10px]'>5.123.456 <span className='font-[400] dashboard-tupl-price text-[32px] font-poppins'>TUPL</span></p>
       <p className='text-[#707188] mt-[25px] text-[14px] font-[400] font-poppins flex items-center gap-[10px]'>Estimated USD Valuation: <span className='text-[#707188] text-[14px] font-[700] font-poppins'>$0.005625</span></p>
       <p className='text-[#7169E6] text-[16px] font-[400] font-poppins'>Total Assets</p>
       </div>
