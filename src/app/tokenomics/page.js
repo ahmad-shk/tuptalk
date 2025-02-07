@@ -26,19 +26,19 @@ function page() {
         <div>
             <NavBar />
             <PageHeader heading={"TOKENOMICS"} subheading={"Tokenomics"} />
-            <p className='font-[400] font-poppins mt-[30px] text-[24px] leading-[36px] text-[black] text-center w-[60%] m-auto'>Tuptalk tokenomics is designed to ensure sustainability, equitable distribution, and long-term value for its ecosystem participants.</p>
+            <p className='font-[400] font-poppins mt-[30px]  text-[24px] token-heading docs-heading docs-main-heading leading-[36px] text-[black] text-center w-[60%] m-auto'>Tuptalk tokenomics is designed to ensure sustainability, equitable distribution, and long-term value for its ecosystem participants.</p>
             <div className="points-container px-[70px] mt-[120px]">
-                <p className='text-[32px] font-[700] font-poppins gradient-text'>TOTAL SUPPLY</p>
-                <p className='font-[400] text-[24px] font-poppins leading-[36px] mt-[10px] pl-[80px]'>The total supply of TUPL tokens is capped at 10,000,000,000 TUPL.</p>
+                <p className='text-[32px] font-[700] token-point-heading font-poppins gradient-text'>TOTAL SUPPLY</p>
+                <p className='font-[400] text-[24px] token-point-para font-poppins leading-[36px] mt-[10px] pl-[80px]'>The total supply of TUPL tokens is capped at 10,000,000,000 TUPL.</p>
             </div>
-            <div className='flex justify-center relative bg-[] mt-[100px] mb-[30px]'>
+            <div className='flex justify-center token-image-container relative bg-[] mt-[100px] mb-[30px]'>
                 <img src="/assets/graphimg.svg" alt="" />
             </div>
-            <div className="px-[70px]">
+            <div className="px-[70px] points-container">
       {points.map((point, index) => (
-        <div key={index} className="points-container mt-[40px]">
-          <p className="text-[32px] font-[700] font-poppins gradient-text uppercase">{point.title}</p>
-          <p className="font-[400] text-[24px] font-poppins leading-[36px] mt-[10px] pl-[80px]">
+        <div key={index} className="points mt-[40px]">
+          <p className="text-[32px] font-[700] token-point-heading font-poppins gradient-text uppercase">{point.title}</p>
+          <p className="font-[400] text-[24px] token-point-para font-poppins leading-[36px] mt-[10px] pl-[80px]">
             {point.description}
           </p>
         </div>

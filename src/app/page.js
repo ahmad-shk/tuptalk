@@ -11,6 +11,7 @@ import HomeBottomSection from './components/home/HomeBottomSection';
 function page() {
   return (
     <>
+    <div className='overflow-x-hidden'>
       <NavBar />
       <HomeHero />
       <HomeRoadmap />
@@ -18,6 +19,7 @@ function page() {
       <Faqs />
       <HomeBottomSection/>
       <Footer mt={"200px"} />
+    </div>
 
     </>
   );

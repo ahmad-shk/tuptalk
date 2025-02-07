@@ -8,24 +8,24 @@ function page() {
         <div>
             <NavBar />
             <PageHeader heading={"DOCS"} subheading={"Docs"} />
-            <div className='h-[48px] w-[220px] mt-[30px] m-auto gradient-bg rounded-[14px] flex items-center justify-center'>
+            <div className='h-[48px] w-[220px] mt-[30px] m-auto docs-whitepaper  gradient-bg rounded-[14px] flex items-center justify-center'>
                 <button className='h-[44px] text-black font-poppins w-[216px] text-[30px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
             </div>
-            <p className='mt-[105px] text-[24px] text-center font-[400] font-poppins'>Import your TUPL Tokens to your MetaMask or TrustWallet</p>
+            <p className='mt-[105px] docs-heading docs-main-heading text-[24px] text-center font-[400] font-poppins'>Import your TUPL Tokens to your MetaMask or TrustWallet</p>
             <div className="wallet-container flex px-[8%] gap-[50px] mt-[80px]">
-                <div className="metamask w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
-                    <p className='font-poppins font-[600] text-[24px] text-center mb-[90px]'>Import process using MetaMask</p>
+                <div className="metamask metamask-left w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
+                    <p className='font-poppins font-[600] docs-heading text-[24px] text-center mb-[90px]'>Import process using MetaMask</p>
                     <div className="relative flex flex-col items-start gap-[40px]">
                     <div className="absolute left-[25px] top-0 w-[2px] bg-gray-400 h-[100%]"></div>
                         {/* Point 1 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 1
                             </div>
                             <span className=''>
                                 <p className=' point-heading w-[90%] font-poppins font-[500] text-[16px] leading-[24px]'>Get the TUPL Token Contract Address</p>
                                 <div className='ml-[8px]'>
-                                <p className='w-[90%] font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>The TUPL token contract address is provided on the presale dApp or the official Tuptalk website. Always verify the contract address through our official communication channels to avoid scams.</p>
+                                <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>The TUPL token contract address is provided on the presale dApp or the official Tuptalk website. Always verify the contract address through our official communication channels to avoid scams.</p>
                                 <p className='font-poppins font-[400] text-[16px] leading-[24px]'>Contract Address: <span className='font-poppins font-[700] text-[16px] leading-[24px]'>0x9c</span></p>
                                 <p className='underline font-bold text-[#728DED]'>LINK</p>
                                 </div>
@@ -33,7 +33,7 @@ function page() {
                         </div>
 
                         {/* Point 2 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 2
                             </div>
@@ -48,7 +48,7 @@ function page() {
                             </span>
                         </div>
                         {/* Point 3 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 3
                             </div>
@@ -73,15 +73,15 @@ function page() {
                                     In the “Custom Token” tab, input the following information:
                                     </p>
                                 </div>
-                                <div className='flex gap-[5px]'>
-                                <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Token Contract Address: </p>
+                                <div className='flex docs-text-flex gap-[5px]'>
+                                <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888] text-nowrap'>Token Contract Address: </p>
                                 <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>0x9cA8530CA349c927</p>
                                 </div>
-                                <div className='flex gap-[5px]'>
+                                <div className='flex docs-text-flex gap-[5px]'>
                                 <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Token Symbol: </p>
                                 <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>TUPL</p>
                                 </div>
-                                <div className='flex gap-[5px]'>
+                                <div className='flex docs-text-flex gap-[5px]'>
                                 <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Decimals of Precision: </p>
                                 <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>18 (or the specified number provided in the presale documentation)</p>
                                 </div>
@@ -89,35 +89,35 @@ function page() {
                             </span>
                         </div>
                          {/* Point 4 */}
-                         <div className="flex gap-[15px] items-start relative">
+                         <div className="flex points-gap gap-[15px] items-start relative">
                          <div className='flex flex-col'>
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 4
                             </div>
-                            <div className='w-[30ox] h-[280px] bg-[white] '></div>
+                            <div className='w-[30ox] last-point-height h-[280px] bg-[white] '></div>
                          </div>
                             <span>
                                 <p className='point-heading w-[90%] font-poppins font-[500] text-[16px] leading-[24px]'>View Your TUPL Tokens</p>
                                 <div className='ml-[8px]'>
-                                <p className='w-[90%] font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>Once imported, your TUPL tokens will appear in the Assets tab of your MetaMask wallet. You can now see your balance and use your tokens as needed.</p>
+                                <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>Once imported, your TUPL tokens will appear in the Assets tab of your MetaMask wallet. You can now see your balance and use your tokens as needed.</p>
                                 </div>
                             </span>
                         </div>
                     </div>
                 </div>
-                <div className="trustwallet w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
-                    <p className='font-poppins font-[600] text-[24px] text-center mb-[90px]'>Import process using TrustWallet</p>
+                <div className="trustwallet trustwallet-right w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
+                    <p className='font-poppins font-[600] text-[24px] text-center  mb-[90px] docs-heading'>Import process using TrustWallet</p>
                     <div className="relative flex flex-col items-start gap-[40px]">
                     <div className="absolute left-[25px] top-0 w-[2px] bg-gray-400 h-[100%]"></div>
                         {/* Point 1 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 1
                             </div>
                             <span className=''>
                                 <p className=' point-heading w-[90%] font-poppins font-[500] text-[16px] leading-[24px]'>Get the TUPL Token Contract Address</p>
                                 <div className='ml-[8px]'>
-                                <p className='w-[90%] font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>The TUPL token contract address is provided on the presale dApp or the official Tuptalk website. Always verify the contract address through our official communication channels to avoid scams.</p>
+                                <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>The TUPL token contract address is provided on the presale dApp or the official Tuptalk website. Always verify the contract address through our official communication channels to avoid scams.</p>
                                 <p className='font-poppins font-[400] text-[16px] leading-[24px]'>Contract Address: <span className='font-poppins font-[700] text-[16px] leading-[24px]'>0x9c</span></p>
                                 <p className='underline font-bold text-[#728DED]'>LINK</p>
                                 </div>
@@ -125,7 +125,7 @@ function page() {
                         </div>
 
                         {/* Point 2 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 2
                             </div>
@@ -140,7 +140,7 @@ function page() {
                             </span>
                         </div>
                         {/* Point 3 */}
-                        <div className="flex gap-[15px] items-start relative">
+                        <div className="flex points-gap gap-[15px] items-start relative">
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 3
                             </div>
@@ -170,17 +170,17 @@ function page() {
                             </span>
                         </div>
                          {/* Point 4 */}
-                         <div className="flex gap-[15px] items-start relative mt-[100px]">
+                         <div className="flex points-gap gap-[15px] trustwallet-last-option items-start relative mt-[100px]">
                          <div className='flex flex-col'>
                             <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                 4
                             </div>
-                            <div className='w-[30ox] h-[280px] bg-[white] '></div>
+                            <div className='w-[30ox] last-point-height h-[280px] bg-[white] '></div>
                          </div>
                             <span>
                                 <p className='point-heading w-[90%] font-poppins font-[500] text-[16px] leading-[24px]'>View Your TUPL Tokens</p>
                                 <div className='ml-[8px]'>
-                                <p className='w-[90%] font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>Once imported, your TUPL tokens will appear in the Assets tab of your MetaMask wallet. You can now see your balance and use your tokens as needed.</p>
+                                <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>Once imported, your TUPL tokens will appear in the Assets tab of your MetaMask wallet. You can now see your balance and use your tokens as needed.</p>
                                 </div>
                             </span>
                         </div>

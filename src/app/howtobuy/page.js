@@ -68,22 +68,22 @@ function page() {
       <div>
         <PageHeader heading={"HOW TO BUY"} subheading={"How to buy"} />
         <div className="steps-container px-[130px] pt-[50px]">
-          <p className='font-[600] text-[30px]'>How to Buy  Tuptalk Tokens (TUPL) During the Presale</p>
-          <p className='text-[#5F5F5F] mt-[10px] text-[16px]'>Note : <span className='text-[black] font-[600]'>Tuptalk</span> Tokens (TUPL) are currently available exclusively during the <span className='text-[black] font-[600]'>Tuptalk</span> Tokens Presale . They are not yet listed on decentralized exchanges (DEXs) like Uniswap or PancakeSwap. Be cautious of counterfeit TUPL tokens on DEXs claiming to be authentic.</p>
-          <p className='font-[600] text-[25px] mt-[20px]'>Step-by-Step Guide to Buying TUPL</p>
+          <p className='font-[600] how-to-buy-heading text-[30px]'>How to Buy  Tuptalk Tokens (TUPL) During the Presale</p>
+          <p className='text-[#5F5F5F] how-to-buy-heading-para mt-[10px] text-[16px]'>Note : <span className='text-[black] font-[600]'>Tuptalk</span> Tokens (TUPL) are currently available exclusively during the <span className='text-[black] font-[600]'>Tuptalk</span> Tokens Presale . They are not yet listed on decentralized exchanges (DEXs) like Uniswap or PancakeSwap. Be cautious of counterfeit TUPL tokens on DEXs claiming to be authentic.</p>
+          <p className='font-[600] how-to-buy-sub-heading text-[25px] pb-[20px] mt-[20px]'>Step-by-Step Guide to Buying TUPL</p>
           {steps.map((step, index) => (
-            <div key={index} className="flex mt-[60px]">
+            <div key={index} className="flex how-to-buy-step-container mt-[60px]">
               {/* Left Section */}
-              <div className="w-[9%] flex flex-col items-center">
-                <div className="h-[85px] w-[85px] rounded-full bg-[#738DED] font-inter text-white font-[700] text-[50px] flex items-center justify-center">
+              <div className="w-[9%] how-to-buy-step-left flex flex-col items-center">
+                <div className="h-[85px] w-[85px] how-to-buy-step-circle rounded-full bg-[#738DED] font-inter text-white font-[700] text-[50px] flex items-center justify-center">
                   {step.number}
                 </div>
-                <p className="font-inter font-[600] text-[16px] text-[#5F5F5F] mt-[10px]">Step {step.number}</p>
+                <p className="font-inter how-to-buy-step-circle-text font-[600] text-[16px] text-[#5F5F5F] mt-[10px]">Step {step.number}</p>
               </div>
               {/* Right Section */}
-              <div className="ml-[20px] w-[91%] how-to-buy-step-bg px-[40px] py-[20px] rounded-[22px]">
-                <p className="font-[600] font-inter text-[20px]">{step.title}</p>
-                <ul className="list-disc leading-[30px] mt-[18px] pl-5 text-[16px] text-[#5F5F5F] font-[400] font-inter">
+              <div className="ml-[20px] how-to-buy-step-right w-[91%] how-to-buy-step-bg px-[40px] py-[20px] rounded-[22px]">
+                <p className="font-[600] how-to-buy-step-heading font-inter text-[20px]">{step.title}</p>
+                <ul className="list-disc how-to-buy-step-point leading-[30px] mt-[18px] pl-5 text-[16px] text-[#5F5F5F] font-[400] font-inter">
                   {step.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
@@ -91,9 +91,7 @@ function page() {
               </div>
             </div>
           ))}
-      {/* <p className='font-[600] mt-[50px] w-[80%] text-[25px] mt-[20px]'>By following 2 simple steps, you can secure your TUPL tokens during this exclusive presale phase.</p> */}
         </div>
-{/* a */}
       </div>
       <Footer mt={"200px"} />
     </div>

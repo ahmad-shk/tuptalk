@@ -9,37 +9,37 @@ function NavBar() {
   const [value, setValue] = useState(true);
   return (
     <>
-      <div className=' nav-shadow h-[100px] flex items-center justify-between px-[30px]'>
+      <div className=' nav-shadow h-[80px] flex items-center justify-between px-[30px]'>
         <Link href="/">
-        <div className='flex items-center gap-[10px]'>
-          <img className='h-[80px]' src="/assets/weblogo.svg" alt="" />
-          <img className='h-[17px]' src="/assets/logotext.svg" alt="" />
+        <div className='flex items-center nav-logo-container gap-[10px]'>
+          <img className=' nav-logo-1 h-[60px]' src="/assets/weblogo.svg" alt="" />
+          <img className=' nav-logo-2 h-[17px]' src="/assets/logotext.svg" alt="" />
         </div>
         </Link>
         <div className='flex items-center gap-[27px]'>
           <Link className='nav-links' href="/howtobuy">
-          <p className='hover:scale-[1.05] duration-300 font-[400] text-[20px] font-Poppins'>HOW TO BUY</p>
+          <p className='hover:scale-[1.05] duration-300 font-[400] text-[18px]  font-Poppins'>HOW TO BUY</p>
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/howtobuy" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
           <Link className='nav-links' href="/tokenomics">
-          <p className='hover:scale-[1.05] duration-300 font-[400] text-[20px] font-Poppins'>TOKENOMICS</p>
+          <p className='hover:scale-[1.05] duration-300 font-[400] text-[18px]  font-Poppins'>TOKENOMICS</p>
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/tokenomics" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
           <Link className='nav-links' href="/docs">
-          <p className='font-[400] text-[20px] font-Poppins'>DOCS</p>
+          <p className='font-[400] text-[18px]  font-Poppins'>DOCS</p>
           <div className={`h-[2px] w-[100%] bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/docs" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
           <Link className='nav-links' href="/about">
-          <p className='hover:scale-[1.05] duration-300 font-[400] text-[20px] font-Poppins'>ABOUT</p>
+          <p className='hover:scale-[1.05] duration-300 font-[400] text-[18px]  font-Poppins'>ABOUT</p>
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/about" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
           <Link className='nav-links' href="/faq">
-          <p className='hover:scale-[1.05] duration-300 font-[400] text-[20px] font-Poppins'>FAQ</p>
+          <p className='hover:scale-[1.05] duration-300 font-[400] text-[18px]  font-Poppins'>FAQ</p>
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/faq" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
-          <img className=' nav-links h-[40px] cursor-pointer' src="/assets/connectwallet.svg" alt="" />
+          <img className=' nav-links h-[32px] cursor-pointer' src="/assets/connectwallet.svg" alt="" />
           <Link className='nav-links' href="/dashboard">
-          <img className='h-[40px] cursor-pointer' src="/assets/profileicon.svg" alt="" />
+          <img className='h-[32px] cursor-pointer' src="/assets/profileicon.svg" alt="" />
           </Link>
           <div className='mobile-menu' onClick={()=>{setValue(!value)}}>
             <img className='h-[32px]' src="/assets/mobilemenu.svg" alt="" />

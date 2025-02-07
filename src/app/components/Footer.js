@@ -4,8 +4,8 @@ import Link from 'next/link';
 function Footer(props) {
   return (
     <>
-      <div className={`h-[240px] w-[100%] bg-[#5C82A9] pt-[50px] pb-[20px]`} style={{ marginTop: `${props.mt}` }}>
-        <div className='flex justify-center gap-[40px]'>
+      <div className={`h-[240px] footer-wrapper w-[100%] bg-[#5C82A9] pt-[50px] pb-[20px]`} style={{ marginTop: `${props.mt}` }}>
+        <div className=' footer-links-container flex justify-center gap-[40px]'>
           <Link href="/howtobuy"><p className='text-white font-[400] font-dmsans text-[15px]'>How to buy</p></Link>
           <Link href="/tokenomics"><p className='text-white font-[400] font-dmsans text-[15px]'>Tokenomics</p></Link>
           <Link href="/docs"><p className='text-white font-[400] font-dmsans text-[15px]'>Docs</p></Link>
