@@ -86,7 +86,7 @@ function page() {
                                                 In the “Custom Token” tab, input the following information:
                                             </p>
                                         </div>
-                                        <div className='flex docs-text-flex gap-[5px]'>
+                                        <div className='flex docs-text-flex gap-[0px] flex-wrap'>
                                             <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888] text-nowrap'>Token Contract Address: </p>
                                             <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888] break-all'>0x77033DecB1d3bf00384473e34B07958044a72aD3</p>
                                         </div>
