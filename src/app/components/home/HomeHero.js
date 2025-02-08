@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 function HomeHero() {
     const [value, setValue] = useState(50); // Initial value
@@ -96,7 +97,7 @@ function HomeHero() {
                         </div>
                         <div className='flex iten-center mt-[30px] cursor-pointer justify-center gap-[8px]'>
                             <img src="/assets/iicon.svg" alt="" />
-                            <p className='text-[18px] indicator-i-text text-[#7072A6]'>How To Buy</p>
+                            <Link className='' href="/howtobuy"><p className='text-[18px] indicator-i-text text-[#7072A6]'>How To Buy</p></Link>
                         </div>
 
                     </div>
