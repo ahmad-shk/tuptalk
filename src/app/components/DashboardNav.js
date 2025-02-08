@@ -6,6 +6,9 @@ import { usePathname } from 'next/navigation';
 
 function DashboardNav({ value, setValue }) {
   const pathname = usePathname();
+  const handleDownload = () => {
+    window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
+};
   return (
     <>
       <div className=' h-[80px] flex items-center justify-between px-[30px]'>
@@ -24,7 +27,7 @@ function DashboardNav({ value, setValue }) {
             <p className='hover:scale-[1.05] duration-300 font-[400] text-[#707188] text-[18px] font-Poppins'>How to buy</p>
             <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/howtobuy" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
-          <Link className='dashboard-nav-links' href="">
+          <Link className='dashboard-nav-links' href="" onClick={handleDownload}>
             <p className='hover:scale-[1.05] duration-300 font-[400] text-[#707188] text-[18px] font-Poppins'>Whitepaper</p>
             <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
