@@ -31,7 +31,7 @@ function HomeTokenomics() {
       </p>
       <img className='h-[17px] copy-text-img cursor-pointer' src="/assets/copy-icon.png" alt="" onClick={handleCopy} />
     </div>
-            <button className='h-[70px] mt-[10px] token-button rounded-[10px] leading-[36px] w-[300px] text-[24px] font-[400] font-poppins bg-radial text-white'>View Contract</button>
+            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[70px] mt-[10px] token-button rounded-[10px] leading-[36px] w-[300px] text-[24px] font-[400] font-poppins bg-radial text-white'>View Contract</button></a>
             </div>
             </div>
     </div>

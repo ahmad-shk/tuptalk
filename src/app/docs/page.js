@@ -38,7 +38,7 @@ function page() {
                                     <div className='ml-[8px]'>
                                         <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>The TUPL token contract address is provided on the presale dApp or the official Tuptalk website. Always verify the contract address through our official communication channels to avoid scams.</p>
                                         <p className='font-poppins font-[400] text-[16px] leading-[24px]'>Contract Address: 
-                                        <span className='font-poppins font-[700] text-[16px]  leading-[24px] break-all'>0x77033DecB1d3bf00384473e34B07958044a72aD3</span></p>
+                                        <span className='font-poppins font-[700] text-[16px]  leading-[24px] break-all'> 0x77033DecB1d3bf00384473e34B07958044a72aD3</span></p>
                                         {/* <p className='underline font-bold text-[#728DED]'>LINK</p> */}
                                         <a className='underline font-bold text-[#728DED]' target='blank' href="https://support.metamask.io/metamask-portfolio/overview/how-to-import-a-token-in-metamask-portfolio/">LINK</a>
                                     </div>
@@ -88,14 +88,14 @@ function page() {
                                         </div>
                                         <div className='flex docs-text-flex gap-[5px]'>
                                             <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888] text-nowrap'>Token Contract Address: </p>
-                                            <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>0x9cA8530CA349c927</p>
+                                            <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888] break-all'>0x77033DecB1d3bf00384473e34B07958044a72aD3</p>
                                         </div>
                                         <div className='flex docs-text-flex gap-[5px]'>
                                             <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Token Symbol: </p>
                                             <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>TUPL</p>
                                         </div>
                                         <div className='flex docs-text-flex gap-[5px]'>
-                                            <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Decimals of Precision: </p>
+                                            <p className='font-poppins font-[700] text-[16px] leading-[24px] text-[#888888]'>Decimals: </p>
                                             <p className='font-poppins text-[16px] font-[400] leading-[24px] text-[#888888]'>18 (or the specified number provided in the presale documentation)</p>
                                         </div>
                                     </div>

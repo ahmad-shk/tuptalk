@@ -8,6 +8,9 @@ function HomeHero() {
     const handleChange = (e) => {
     setValue(parseInt(e.target.value, 10));
   };
+  const handleDownload = () => {
+    window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
+};
     return (
         <>
             <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto'>
@@ -16,10 +19,10 @@ function HomeHero() {
                     <div className=' bg-[] relative '>
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
-                            <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center'>
+                            <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}>
                                 <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
                             </div>
-                            <button className='h-[40px] home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[24px] text-white gradient-bg rounded-[14px]'>CONTRACT</button>
+                            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[24px] text-white gradient-bg rounded-[14px]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/twitter.svg" alt="" />
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/telegram.svg" alt="" />
