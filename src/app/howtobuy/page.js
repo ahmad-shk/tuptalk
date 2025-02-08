@@ -41,7 +41,7 @@ function page() {
       title: "Enter Purchase Amount",
       points: [
         "Input the amount of ETH or USDT you want to ",
-        "The dashboard will display the number of TUPL tokens you’ll ",
+        "The dashboard will display the number of TUPL tokens you’ll receive. ",
         'Confirm your selection and click "Buy."',
       ],
     },
