@@ -34,11 +34,12 @@ function page() {
         tokenomicsHeadings.current.forEach((title, i)=>{
            gsap.to(tokenomicsHeadings.current[i], {
             opacity: 1,
-            duration: .4,
+            duration: .8,
             x: 0,
             scrollTrigger: {
               trigger: tokenomicsHeadings.current[i],
-              start: '100px bottom'
+              start: '100px bottom',
+              markers: true
             }
            })
         });
