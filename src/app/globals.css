@@ -80,7 +80,7 @@ body {
 .connectWalletBigBtn{
   transition: .4s;
   &:hover img{
-    transform: scale(3) rotate(-45deg) translateX(-5px);
+    transform: scale(3) translateX(-5px);
   }
   &:hover{
     box-shadow: 0px 0px 6px 6px rgba(234, 42, 255, 0.506);
@@ -108,6 +108,15 @@ body {
     background-color: #A33AB9;
   } */
 }
+
+.rangeSliderCont{
+  transition: .4s;
+  &:hover{
+   box-shadow: 0px 0px 8px 3px #ff23f0;
+   transform: scale(1.04);
+  }
+}
+
 
 .button-border {
   border: 2px solid transparent;
@@ -210,6 +219,173 @@ input[type="range"]::-moz-range-thumb {
   color: #ffffff;
  }
  
+/* ============= SVG Target Animation ============= */
+
+.svg-frame {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: .5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 344px;
+  height: 344px;
+  fill: none;
+}
+
+/* .svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+} */
+
+.svg-frame svg #center {
+  transition: .5s;
+  transform-origin: center;
+}
+
+/* .svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+} */
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============= falling tiles Animation ============= */
+ 
+.center-body{
+  height: 30px;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-spanne-20 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.loader-spanne-20 > span {
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 30px;
+  background-color: rgb(31, 31, 31);
+  display: block;
+  border-radius: 3px;
+  transform-origin: 50% 100%;
+  animation: move 2.8s linear infinite;
+}
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(-40px) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50px) rotate(22deg);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(-85px) rotate(60deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px) rotate(65deg);
+  }
+}
+
+
+/* ============= gear rotater ============= */
+
+/* From Uiverse.io by Shoh2008 */ 
+.gear-rotater {
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.gear-rotater::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.gear-rotater::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
 /* ============= animated Profile Btn ============= */
 
@@ -330,6 +506,25 @@ input[type="range"]::-moz-range-thumb {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+/* ============= HOW TO BUY PAGE ============= */
+
+.howtobuy-points{
+  transition: 1s;
+  animation: 2s castShadow infinite ease-in-out;
+}
+
+@keyframes castShadow{
+  0%{
+    box-shadow: none;
+  }
+  50%{
+    box-shadow: 0px 0px 12px 12px #738DED;
+  }
+  100%{
+    box-shadow: none;
   }
 }
 

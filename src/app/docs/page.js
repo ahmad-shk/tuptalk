@@ -1,9 +1,14 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import NavBar from '../components/NavBar';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AnimatedBtn from '../components/UIcomponents/animatedBtn';
+gsap.registerPlugin(ScrollTrigger);
 
 function page() {
     const [visible, setVisible] = useState(false);
@@ -36,6 +41,38 @@ function page() {
     const handleDownload = () => {
         window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
     };
+
+    const pointsCircle = useRef([]);
+    const pointsLines = useRef([]);
+
+    useGSAP(()=>{
+     pointsCircle.current.forEach((el, i)=>{
+        gsap.to(pointsCircle.current[i], {
+            backgroundColor: '#738DED',
+            scrollTrigger: {
+                trigger: pointsCircle.current[i],
+                start: '10px bottom',
+                scrub: 1
+            }
+        })
+    });
+     
+    pointsLines.current.forEach((line, i)=>{
+        gsap.to(pointsLines.current[i], {
+            scale: 1,
+            transformOrigin: 'top',
+            duration: 1,
+            scrollTrigger: {
+                trigger: pointsCircle.current[0],
+                start: 'bottom 50%',
+                end: '1000% top',
+                scrub: 5,
+            }
+        })
+    });
+
+    })
+
     return (
         <div>
     <div
@@ -51,22 +88,23 @@ function page() {
             <div className='pt-[80px]'>
                 <PageHeader heading={"DOCS"} subheading={"Docs"} />
                 <div className='h-[48px] w-[220px] mt-[30px] m-auto docs-whitepaper gradient-bg rounded-[14px] flex items-center justify-center'>
-                    <button
+                    {/* <button
                         onClick={handleDownload}
                         className='h-[44px] text-black font-poppins w-[216px] text-[30px] rounded-[14px] bg-[white]'
                     >
                         WHITEPAPER
-                    </button>
+                    </button> */}
+                    <AnimatedBtn onClick={handleDownload} style={'w-[250px] text-[30px] text-black'} label={'WHITE PAPER'} />
                 </div>
                 <p className='mt-[105px] docs-heading docs-main-heading text-[24px] text-center font-[400] font-poppins'>Import your TUPL Tokens to your MetaMask or TrustWallet</p>
                 <div className="wallet-container flex px-[8%] gap-[50px] mt-[80px]">
                     <div className="metamask metamask-left w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
                         <p className='font-poppins font-[600] docs-heading text-[24px] text-center mb-[90px]'>Import process using MetaMask</p>
                         <div className="relative flex flex-col items-start gap-[40px]">
-                            <div className="absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
+                            <div ref={e=>pointsLines.current[0]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
                             {/* Point 1 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[0]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                     1
                                 </div>
                                 <span className=''>
@@ -83,7 +121,7 @@ function page() {
 
                             {/* Point 2 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[1]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center -bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
                                     2
                                 </div>
                                 <span>
@@ -98,7 +136,7 @@ function page() {
                             </div>
                             {/* Point 3 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[2]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                     3
                                 </div>
                                 <span>
@@ -140,7 +178,7 @@ function page() {
                             {/* Point 4 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
                                 <div className='flex flex-col'>
-                                    <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                    <div ref={e=>pointsCircle.current[3]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                         4
                                     </div>
                                     <div className='w-[30ox] last-point-height h-[280px] bg-[white] '></div>
@@ -157,10 +195,10 @@ function page() {
                     <div className="trustwallet trustwallet-right w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
                         <p className='font-poppins font-[600] text-[24px] text-center  mb-[90px] docs-heading'>Import process using TrustWallet</p>
                         <div className="relative flex flex-col items-start gap-[40px]">
-                            <div className="absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
+                            <div ref={e=>pointsLines.current[1]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
                             {/* Point 1 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[4]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                     1
                                 </div>
                                 <span className=''>
@@ -176,7 +214,7 @@ function page() {
 
                             {/* Point 2 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[5]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                     2
                                 </div>
                                 <span>
@@ -188,7 +226,7 @@ function page() {
                             </div>
                             {/* Point 3 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
-                                <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                <div ref={e=>pointsCircle.current[6]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                     3
                                 </div>
                                 <span>
@@ -237,7 +275,7 @@ function page() {
                             {/* Point 4 */}
                             <div className="flex points-gap gap-[15px] trustwallet-last-option items-start relative ">
                                 <div className='flex flex-col'>
-                                    <div className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED] font-poppins font-[700] text-[24px] text-white z-10">
+                                    <div ref={e=>pointsCircle.current[7]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
                                         4
                                     </div>
                                     <div className='w-[30ox] last-point-height h-[280px] bg-[white] '></div>
