@@ -1,8 +1,12 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import NavBar from '../components/NavBar';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function page() {
   const [faq, setFaq] = useState(null);
@@ -10,33 +14,23 @@ function page() {
   const toggleFaq = (index) => {
     setFaq(faq === index ? null : index);
   };
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-      // Calculate percentage scrolled
-      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+  const faqBoxes = useRef([]);
 
-      // Show icon after 2% scroll, and hide it only when user scrolls back to the top
-      if (scrollPercentage >= 2) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
+  useGSAP(()=>{
+    faqBoxes.current.forEach((faqBox, i)=>{
+      gsap.to(faqBoxes.current[i], {
+         y: 0,
+         opacity: 1,
+         duration: .4,
+         scrollTrigger: {
+          trigger: faqBoxes.current[i],
+          start: '100px bottom'
+         }
+      })
+    })
+  })
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
   return (
     <>
         <div>
@@ -76,8 +70,9 @@ function page() {
           },
         ].map((item, index) => (
           <div
+            ref={e=>faqBoxes.current[index]=e}
             key={index}
-            className="min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex flex-col py-[40px] px-[40px] justify-center items-start"
+            className="opacity-0 translate-y-[60px] min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex flex-col py-[40px] px-[40px] justify-center items-start"
           >
             <div className="flex items-center justify-between w-full">
               <p className="question question-text font-[500] text-[22px] font-poppins">{item.question}</p>
