@@ -1,5 +1,9 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function Faqs() {
   const [faq, setFaq] = useState(null);
@@ -7,11 +11,46 @@ function Faqs() {
   const toggleFaq = (index) => {
     setFaq(faq === index ? null : index);
   };
+
+  const faqsTop = useRef(null); 
+  const faqsText = useRef(null);
+  const faqsQuestions = useRef([]);
+
+  useGSAP(()=>{
+    gsap.to(faqsTop.current, {
+                    transformOrigin: 'center',
+                    scale: 1,
+                    duration: .4,
+                    onComplete: ()=>{
+                       gsap.to(faqsText.current, {
+                                   transformOrigin: 'center',
+                                   scale: 1,
+                                   duration: .4,
+                               });
+                    },
+                    scrollTrigger: {
+                        trigger: faqsTop.current,
+                        start: '100px bottom',
+                    }
+                });
+                gsap.to(faqsQuestions.current, {
+                    opacity: 1,
+                    y: 0,
+                    duration: .6,
+                    stagger: .4,
+                    scrollTrigger: {
+                      trigger: faqsQuestions.current,
+                      start: '100px bottom',
+                    }
+                })
+  })
+
+
   return (
     <div>
       <div className='flex items-center flex-col roadmap-header mt-[100px]'>
-        <img src="/assets/upline.svg" alt="" />
-        <p className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px]'>FAQs</p>
+        <img ref={faqsTop} src="/assets/upline.svg" alt="" className='scale-0' />
+        <p ref={faqsText} className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px] scale-0'>FAQs</p>
       </div>
       <div className="questions-container mt-[60px]">
         {[
@@ -37,8 +76,9 @@ function Faqs() {
           },
         ].map((item, index) => (
           <div
+            ref={(e)=>faqsQuestions.current[index]=e}
             key={index}
-            className="min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex flex-col py-[40px] px-[40px] justify-center items-start"
+            className="min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex-col py-[40px] px-[40px] justify-center items-start opacity-0 translate-y-[100px]"
           >
             <div className="flex items-center justify-between w-full">
               <p className="question question-text font-[500] text-[22px] font-poppins">{item.question}</p>

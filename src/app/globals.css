@@ -54,6 +54,49 @@ body {
   box-shadow: 0px 4px 18px 8px rgba(0, 0, 0, 0.25);
 }
 
+.bgBtnShadow{
+  position: relative;
+  overflow: hidden;
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.593);
+    height: 200%;
+    width: 30px;
+    top: 0;
+    transition: .4s;
+    transform: skew(20deg) translateX(-300%);
+  }
+  &:hover::before{
+    transform: translateX(600%);
+  }
+  &:hover{
+    box-shadow: 0px 0px 2px 2px rgba(234, 42, 255, 0.506),
+    0px 0px 8px 8px rgba(244, 140, 255, 0.506),
+    0px 0px 16px 18px rgba(244, 143, 255, 0.506);
+  }
+}
+
+.connectWalletBigBtn{
+  transition: .4s;
+  &:hover img{
+    transform: scale(3) rotate(-45deg) translateX(-5px);
+  }
+  &:hover{
+    box-shadow: 0px 0px 6px 6px rgba(234, 42, 255, 0.506);
+  }
+}
+
+.contactBtn{
+  transition: .4s;
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px 8px #ad56ff;
+    font-size: 38px;
+    font-weight: 600;
+  }
+}
+
 .button-border {
   border: 2px solid transparent;
   /* Set a transparent border */
@@ -114,6 +157,168 @@ input[type="range"]::-moz-range-thumb {
 
 .mobile-nav-shadow {
   box-shadow: -4px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= animated Btn ============= */
+
+ 
+.animatedBtn {
+  padding: 6px 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  background-color: rgb(247, 247, 247);
+  border-radius: .5rem;
+ }
+ 
+ .animatedBtn::before {
+  content: '';
+  width: 0;
+  height: 500%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: linear-gradient(to left, #6545C8, #D943C6);
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .animatedBtn:hover::before {
+  width: 150%;
+ }
+ 
+ .animatedBtn:hover {
+  color: #ffffff;
+ }
+ 
+
+/* ============= animated Profile Btn ============= */
+
+
+.imgBtnBorders {
+  position: relative;
+  display: inline-block;
+  padding: 4px 1rem;
+  border: 2px solid #4f4f4f;
+  text-transform: uppercase;
+  color: #fefefe;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.imgBtnBorders::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% - 12px);
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+  transform: scaleY(1);
+}
+
+.imgBtnBorders:hover::before {
+  transform: scaleY(0);
+}
+
+.imgBtnBorders::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% - 12px);
+  background-color: #ffffff;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+
+.imgBtnBorders:hover::after {
+  transform: scaleX(0);
+}
+
+.imgBtnBorders span {
+  position: relative;
+  z-index: 3;
+}
+
+.animatedProfileBtn {
+  background-color: none;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #303030;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #242424;
+  top: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.animatedProfileBtn:hover .tooltip {
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ============= navlistText ============= */
+
+.navlistText span {
+  transition: opacity 0.2s ease-in-out;
+  display: inline-block;
+  visibility: visible;
+}
+
+.navlistText:hover span{
+  animation: wave 0.5s ease forwards calc(var(--i) * 0.05s);
+}
+
+@keyframes wave {
+  30% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(-3px);
+    color: #ff5569;
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* ============= Responsive Styles ============= */

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import AnimatedBtn from '../UIcomponents/animatedBtn';
 
 function HomeHero() {
     const [value, setValue] = useState(50); // Initial value
@@ -20,10 +21,11 @@ function HomeHero() {
                     <div className=' bg-[] relative '>
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
-                            <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}>
-                                <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button>
-                            </div>
-                            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[24px] text-white gradient-bg rounded-[14px]'>CONTRACT</button></a>
+                            {/* <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}> */}
+                                {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
+                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[24px] '}/>
+                            {/* </div> */}
+                            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[24px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/twitter.svg" alt="" />
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/telegram.svg" alt="" />
@@ -64,8 +66,8 @@ function HomeHero() {
                         </div>
                         <p className='font-[400] mt-[24px] font-poppins text-[14px] text-center text-[#000000]'>1 TUPL = <span className='font-popins font-[400] text-[14px] gradient-text'>$0.005626</span></p>
                         <div className='flex justify-center gap-[30px] mt-[24px]'>
-                            <button className='h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] text-[white] bg-[#7165EA]'> <img className='h-[24px]' src="/assets/eth.svg" alt="" />ETH</button>
-                            <button className='h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
+                            <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] text-[white] bg-[#7165EA]'> <img className='h-[24px]' src="/assets/eth.svg" alt="" />ETH</button>
+                            <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px] hover:bg-[#7165EA]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
                         </div>
                         <div className='mt-[24px] flex items-center indicator-line-container justify-center gap-[20px]'>
                             <div className='h-[1px] indicator-line w-[25%] bg-[#999C9F]'></div>
@@ -88,8 +90,8 @@ function HomeHero() {
                                 </div>
                             </div>
                         </div>
-                        <button className='h-[54px] indicator-button-wrapper w-[100%] mt-[100px] gradient-bg rounded-[10px] flex items-center justify-center gap-[10px]'>
-                            <img className='h-[20px]' src="/assets/walleticon.svg" alt="" />
+                        <button className='connectWalletBigBtn h-[54px] indicator-button-wrapper w-[100%] mt-[100px] gradient-bg rounded-[10px] flex items-center justify-center gap-[10px]'>
+                            <img className='transition-[.4s] h-[20px]' src="/assets/walleticon.svg" alt="" />
                             <p className='text-[20px] indicator-button font-poppins'>CONNECT WALLET</p>
                         </button>
                         <div className='flex justify-center'>
