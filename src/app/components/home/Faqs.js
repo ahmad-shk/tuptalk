@@ -78,7 +78,7 @@ function Faqs() {
           <div
             ref={(e)=>faqsQuestions.current[index]=e}
             key={index}
-            className="min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex-col py-[40px] px-[40px] justify-center items-start opacity-0 translate-y-[100px]"
+            className="faqCard min-h-[132px] mt-[25px] faq-question-container rounded-[18px] w-[80%] flex m-auto faq-shadow flex-col py-[40px] px-[40px] justify-center items-start opacity-0 translate-y-[100px]"
           >
             <div className="flex items-center justify-between w-full">
               <p className="question question-text font-[500] text-[22px] font-poppins">{item.question}</p>
