@@ -66,7 +66,7 @@ function page() {
             scrollTrigger: {
               trigger: tokenomicsHeadings.current[i],
               start: '100px bottom',
-              markers: true
+              // markers: true
             }
            })
         });
