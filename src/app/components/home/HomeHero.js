@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import AnimatedBtn from '../UIcomponents/animatedBtn';
+import SVGTargetAnimation from '../UIcomponents/SVGTargetAnimation';
 
 function HomeHero() {
     const [value, setValue] = useState(50); // Initial value
@@ -45,7 +46,7 @@ function HomeHero() {
                             <p className='font-[400] font-poppins text-[14px] text-[#999C9F]'>Next stage price: <span className='font-popins font-[700] text-[14px]'>$0.006</span></p>
                         </div>
                         <div className='range-container'>
-                            <div className="flex flex-col mt-[24px] rounded-[66px] h-[16px] items-center w-full bg-[#D8D8D8] ">
+                            <div className="rangeSliderCont flex flex-col mt-[24px] rounded-[66px] h-[16px] items-center w-full bg-[#D8D8D8]">
                                 <input
                                     type="range"
                                     min="0"
@@ -65,9 +66,9 @@ function HomeHero() {
                             <div className='bg-[#6388C9] mt-[20px] h-[1px] w-[90%]'></div>
                         </div>
                         <p className='font-[400] mt-[24px] font-poppins text-[14px] text-center text-[#000000]'>1 TUPL = <span className='font-popins font-[400] text-[14px] gradient-text'>$0.005626</span></p>
-                        <div className='flex justify-center gap-[30px] mt-[24px]'>
+                        <div className='flex justify-center gap-[30px] mt-[24px] '>
                             <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] text-[white] bg-[#7165EA]'> <img className='h-[24px]' src="/assets/eth.svg" alt="" />ETH</button>
-                            <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px] hover:bg-[#7165EA]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
+                            <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px] hover:bg-[#7165EA] hover:text-[white]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
                         </div>
                         <div className='mt-[24px] flex items-center indicator-line-container justify-center gap-[20px]'>
                             <div className='h-[1px] indicator-line w-[25%] bg-[#999C9F]'></div>
