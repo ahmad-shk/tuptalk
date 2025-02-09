@@ -1,16 +1,51 @@
 'use client'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import PageHeader from '../components/PageHeader';
 import Footer from '../components/Footer';
 
 function page() {
+    const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+      // Calculate percentage scrolled
+      const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+      // Show icon after 2% scroll, and hide it only when user scrolls back to the top
+      if (scrollPercentage >= 2) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
     const handleDownload = () => {
         window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
     };
     return (
         <div>
+    <div
+      className={`cursor-pointer fixed bottom-[60px] right-[60px] z-[9999] bg-radial faq-dropdown-icon min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex items-center justify-center transition-opacity duration-300 ${
+        visible ? 'block' : 'hidden'
+      }`}
+      onClick={scrollToTop}
+    >
+      <img className="rotate-[180deg]" src="/assets/faqopen.svg" alt="Scroll to Top" />
+    </div>
             <NavBar />
             <div className='pt-[80px]'>
                 <PageHeader heading={"DOCS"} subheading={"Docs"} />
@@ -40,7 +75,7 @@ function page() {
                                         <p className='font-poppins font-[400] text-[16px] leading-[24px]'>Contract Address: 
                                         <span className='font-poppins font-[700] text-[16px]  leading-[24px] break-all'> 0x77033DecB1d3bf00384473e34B07958044a72aD3</span></p>
                                         {/* <p className='underline font-bold text-[#728DED]'>LINK</p> */}
-                                        <a className='underline font-bold text-[#728DED]' target='blank' href="https://support.metamask.io/metamask-portfolio/overview/how-to-import-a-token-in-metamask-portfolio/">LINK</a>
+                                        <a className='underline font-bold text-[#728DED]' target='blank' href="https://support.metamask.io/metamask-portfolio/overview/how-to-import-a-token-in-metamask-portfolio/">MetaMask Support</a>
                                     </div>
                                 </span>
                             </div>
@@ -133,7 +168,7 @@ function page() {
                                         <p className='w-[90%] point-heading font-poppins font-[400] text-[16px] text-[#888888] leading-[24px]'>You’ll need the TUPL token contract address, which can be found on the presale dApp or the official Tuptalk website. Always ensure you’re using the verified contract address from our official sources.</p>
                                         <p className='font-poppins font-[400] text-[16px] leading-[24px]'>Contract Address: <span className='font-poppins font-[700]  break-all text-[16px] leading-[24px]'>0x77033DecB1d3bf00384473e34B07958044a72aD3</span></p>
                                         {/* <p className='underline font-bold text-[#728DED]'>LINK</p> */}
-                                        <a className='underline font-bold text-[#728DED]' target='blank' href="https://trustwallet.com/blog/how-to-add-a-custom-token-using-trust-wallet">LINK</a>
+                                        <a className='underline font-bold text-[#728DED]' target='blank' href="https://trustwallet.com/blog/how-to-add-a-custom-token-using-trust-wallet">TrustWallet Support</a>
                                     </div>
                                 </span>
                             </div>

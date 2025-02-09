@@ -1,11 +1,51 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import DashboardNav from '../components/DashboardNav';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 function page() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const mainDiv = document.querySelector('.dashboard-main');
+      if (mainDiv) {
+        const scrollTop = mainDiv.scrollTop;
+        const scrollHeight = mainDiv.scrollHeight - mainDiv.clientHeight;
+
+        // Calculate percentage scrolled
+        const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+        // Show icon after 2% scroll, and hide it when user scrolls back to the top
+        if (scrollPercentage >= 2) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    };
+
+    const mainDiv = document.querySelector('.dashboard-main');
+    if (mainDiv) {
+      mainDiv.addEventListener('scroll', handleScroll);
+    }
+    return () => {
+      if (mainDiv) {
+        mainDiv.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const mainDiv = document.querySelector('.dashboard-main');
+    if (mainDiv) {
+      mainDiv.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
   const [value, setValue] = useState(true);
   const pathname = usePathname();
   const handleDownload = () => {
@@ -13,6 +53,14 @@ function page() {
 };
   return (
     <div className=''>
+    <div
+      className={`cursor-pointer fixed bottom-[60px] right-[60px] z-[9999] bg-radial faq-dropdown-icon min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex items-center justify-center transition-opacity duration-300 ${
+        visible ? 'block' : 'hidden'
+      }`}
+      onClick={scrollToTop}
+    >
+      <img className="rotate-[180deg]" src="/assets/faqopen.svg" alt="Scroll to Top" />
+    </div>
       <DashboardNav setValue={setValue} value={value} />
       <div className=' bg-[] dashboard-inner w-[100%] pt-[0px] flex' style={{ height: "calc(100vh - 100px)" }}>
         <div className={`sidebar dashboard-sidebar-2 w-[315px] scrollnone overflow-y-scroll duration-700 pr-[14px] bg-[]`} >
@@ -20,17 +68,6 @@ function page() {
             <img className='h-[18px]' src="/assets/dashboardicon.svg" alt="" />
             <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Dashboard</p>
           </div>
-          {/* <div className='h-[52px] rounded-r-[20px] pl-[20px] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
-            <img className='h-[24px]' src="/assets/importicon.svg" alt="" />
-            <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Import token</p>
-        </div>
-        <div className='h-[52px] rounded-r-[20px] pl-[20px] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
-            <img className='h-[20px]' src="/assets/dollericon.svg" alt="" />
-            <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Buy TUPL</p>
-        </div>
-        <div className='flex justify-center my-[20px]'>
-        <div className='w-[129px] h-[1px] bg-[#7169E6]'></div>
-        </div> */}
           <div className='flex flex-col bg-[] justify-center items-center mt-[20px] gap-[27px]'>
           </div>
           <div className='flex items-center gap-[10px] pl-[15px] mt-[40px]'>
@@ -61,14 +98,6 @@ function page() {
             <img className='h-[18px]' src="/assets/dashboardicon.svg" alt="" />
             <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Dashboard</p>
           </div>
-          {/* <div className='h-[52px] rounded-r-[20px] pl-[20px] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
-            <img className='h-[24px]' src="/assets/importicon.svg" alt="" />
-            <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Import token</p>
-        </div>
-        <div className='h-[52px] rounded-r-[20px] pl-[20px] hover:bg-[#EFEFFE] cursor-pointer duration-300 flex items-center gap-[15px]'>
-            <img className='h-[20px]' src="/assets/dollericon.svg" alt="" />
-            <p className='text-[18px] leading-[30px] font-[400] font-poppins text-nowrap text-[#7169E6]'>Buy TUPL</p>
-        </div> */}
           <div className='flex justify-center my-[20px]'>
             <div className='w-[129px] h-[1px] bg-[#7169E6]'></div>
           </div>
