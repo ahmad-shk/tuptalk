@@ -67,7 +67,7 @@ function HomeHero() {
                                         visibility: 'visible'
                                     }}
                                 />
-                                <GearRotater style={`left-[${value}%]`}/>
+                                {/* <GearRotater style={`left-[${value}%]`}/> */}
                             </div>
                         </div>
                         <p className='font-[400] mt-[20px] font-poppins text-[14px] text-center text-[#999C9F]'>Raised: <span className='font-popins font-[700] text-[14px]'>$12,474,042.377</span></p>
