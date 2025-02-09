@@ -23,9 +23,9 @@ function HomeHero() {
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
                             {/* <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}> */}
                                 {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
-                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[24px] '}/>
+                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] flex items-center justify-center p-[0px] '}/>
                             {/* </div> */}
-                            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[24px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
+                            <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[22px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/twitter.svg" alt="" />
                                 <img className=' home-hero-button-social h-[35px] cursor-pointer' src="/assets/telegram.svg" alt="" />
@@ -86,7 +86,7 @@ function HomeHero() {
                                 <p className='font-popins font-[700] text-[14px] mb-[3px] text-[#999C9F]'>Receive TUPL</p>
                                 <div className='h-[37px] w-[150px] flex items-center px-[10px] justify-between gap-[5px] rounded-[5px] bg-[white] border-[#9A9A9A] border-[1px]'>
                                     <input className='w-[70%] placeholder-black outline-none border-none' placeholder='0' type="text" />
-                                    <img className='h-[24px]' src="/assets/eth.svg" alt="" />
+                                    <img className='h-[20px]' src="/assets/weblogo.svg" alt="" />
                                 </div>
                             </div>
                         </div>

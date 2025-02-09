@@ -57,7 +57,9 @@ function NavBar() {
           <NavlistText label={'FAQs'} />
           <div className={`h-[2px] w-[100%]  bg-gradient-to-r from-[#6545C8] to-[#D943C6] ${pathname === "/faq" ? 'opacity-[1]' : 'opacity-[0]'} `}></div>
           </Link>
+          <span className='nav-links'>
           <AnimatedBtn label={'connect wallet'} />
+          </span>
           {/* <img className=' nav-links h-[32px] cursor-pointer' src="/assets/connectwallet.svg" alt="" /> */}
           <Link className='nav-links' href="/dashboard">
           {/* <img className='profilepic h-[32px] cursor-pointer' src="/assets/profileicon2.svg" alt="" /> */}
