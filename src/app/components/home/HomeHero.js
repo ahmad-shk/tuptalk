@@ -40,7 +40,7 @@ function HomeHero() {
                     </div>
                 </div>
                 <div className="hero-right w-[50%] flex justify-center relative z-[2]">
-                <SVGTargetAnimation style={'absolute right-[-20%] bottom-[18%] opacity-[.8]'}/>
+                {/* <SVGTargetAnimation style={'absolute right-[-20%] bottom-[18%] opacity-[.8]'}/> */}
                     <div className='bg-[#ffffff16] backdrop-blur-[4px] hero-price-indicator relative z-[] rounded-[30px] h-[800px] w-[88%] buy-tupl-shadow mt-[45px] py-[40px] px-[30px]'>
                     
                         <div className='flex gap-[20px] justify-center items-center bg-[]'>
