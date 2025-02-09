@@ -1,7 +1,12 @@
+'use client'
 import NavBar from '@/app/components/NavBar';
-import React from 'react';
+import React, { useRef } from 'react';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function page() {
   const steps = [
@@ -62,6 +67,30 @@ function page() {
       ],
     },
   ];
+
+  const leftSection = useRef([]);
+  const rightSection = useRef([]);
+
+  useGSAP(()=>{
+    gsap.to(leftSection.current, {
+      opacity: 1,
+      y: 0,
+      duration: .4,
+      onComplete: ()=>{
+        gsap.to(rightSection.current, {
+          opacity: 1,
+          x: 0,
+          duration: .4,
+          stagger: .2
+        })
+      },
+      scrollTrigger: {
+        trigger: leftSection.current,
+        start: '100px bottom'
+      }
+    })
+  })
+
   return (
     <div>
       <NavBar />
@@ -74,14 +103,14 @@ function page() {
           {steps.map((step, index) => (
             <div key={index} className="flex how-to-buy-step-container mt-[60px]">
               {/* Left Section */}
-              <div className="w-[9%] how-to-buy-step-left flex flex-col items-center">
-                <div className="h-[85px] w-[85px] how-to-buy-step-circle rounded-full bg-[#738DED] font-inter text-white font-[700] text-[50px] flex items-center justify-center">
+              <div ref={e=>leftSection.current[index]=e} className="opacity-0 translate-y-[80px] w-[9%] how-to-buy-step-left flex flex-col items-center">
+                <div className="h-[85px] w-[85px] how-to-buy-step-circle rounded-full bg-[#738DED] font-inter text-white font-[700] text-[50px] flex items-center justify-center howtobuy-points">
                   {step.number}
                 </div>
                 <p className="font-inter how-to-buy-step-circle-text font-[600] text-[16px] text-[#5F5F5F] mt-[10px]">Step {step.number}</p>
               </div>
               {/* Right Section */}
-              <div className="ml-[20px] how-to-buy-step-right w-[91%] how-to-buy-step-bg px-[40px] py-[20px] rounded-[22px]">
+              <div ref={e=>rightSection.current[index]=e} className="opacity-0 translate-x-[160px] ml-[20px] how-to-buy-step-right w-[91%] how-to-buy-step-bg px-[40px] py-[20px] rounded-[22px]">
                 <p className="font-[600] how-to-buy-step-heading font-inter text-[20px]">{step.title}</p>
                 <ul className="list-disc how-to-buy-step-point leading-[30px] mt-[18px] pl-5 text-[16px] text-[#5F5F5F] font-[400] font-inter">
                   {step.points.map((point, i) => (

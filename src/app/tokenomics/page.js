@@ -1,7 +1,12 @@
-import React from 'react';
+'use client'
+import React, { useRef } from 'react';
 import PageHeader from '../components/PageHeader';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function page() {
     const points = [
@@ -22,6 +27,24 @@ function page() {
           description: "Rewards the core team and contributors, with vesting schedules to align incentives with the platform's long-term growth.",
         },
       ];
+
+      const tokenomicsHeadings = useRef([]);
+
+      useGSAP(()=>{
+        tokenomicsHeadings.current.forEach((title, i)=>{
+           gsap.to(tokenomicsHeadings.current[i], {
+            opacity: 1,
+            duration: .4,
+            x: 0,
+            scrollTrigger: {
+              trigger: tokenomicsHeadings.current[i],
+              start: '100px bottom'
+            }
+           })
+        });
+        
+      })
+
     return (
         <div>
             <NavBar />
@@ -29,7 +52,7 @@ function page() {
             <PageHeader heading={"TOKENOMICS"} subheading={"Tokenomics"} />
             <p className='font-[400] font-poppins mt-[30px]  text-[24px] token-heading docs-heading docs-main-heading leading-[36px] text-[black] text-center w-[60%] m-auto'>Tuptalk tokenomics is designed to ensure sustainability, equitable distribution, and long-term value for its ecosystem participants.</p>
             <div className="points-container px-[70px] mt-[120px]">
-                <p className='text-[32px] font-[700] token-point-heading font-poppins gradient-text'>TOTAL SUPPLY</p>
+                <p ref={e=>tokenomicsHeadings.current[0]=e} className='opacity-0 translate-x-[-40px] text-[32px] font-[700] token-point-heading font-poppins gradient-text'>TOTAL SUPPLY</p>
                 <p className='font-[400] text-[24px] token-point-para font-poppins leading-[36px] mt-[10px] pl-[80px]'>The total supply of TUPL tokens is capped at 10,000,000,000 TUPL.</p>
             </div>
             <div className='flex justify-center token-image-container relative bg-[] mt-[100px] mb-[30px]'>
@@ -38,7 +61,7 @@ function page() {
             <div className="px-[70px] points-container">
       {points.map((point, index) => (
         <div key={index} className="points mt-[40px]">
-          <p className="text-[32px] font-[700] token-point-heading font-poppins gradient-text uppercase">{point.title}</p>
+          <p ref={e=>tokenomicsHeadings.current[index+1]=e} className="opacity-0 translate-x-[-40px] text-[32px] font-[700] token-point-heading font-poppins gradient-text uppercase">{point.title}</p>
           <p className="font-[400] text-[24px] token-point-para font-poppins leading-[36px] mt-[10px] pl-[80px]">
             {point.description}
           </p>
