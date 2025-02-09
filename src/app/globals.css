@@ -530,6 +530,12 @@ input[type="range"]::-moz-range-thumb {
 
 /* ============= Responsive Styles ============= */
 
+@media screen and (max-width: 600px) {
+.bottomtotop{
+  right: 12px;
+}
+}
+
 @media screen and (max-width: 750px) {
 .page-header-home-text{
   padding-bottom: 20px;
@@ -575,6 +581,10 @@ input[type="range"]::-moz-range-thumb {
 
   .dashboard-nav-links {
     display: none;
+  }
+
+  .dashboard-banner{
+    border-radius: 20px !important;
   }
 
 }
@@ -844,7 +854,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 1100px) {
-  .docs-whitepaper button {
+  .docs-whitepaper {
     font-size: 22px;
     height: 36px;
     width: 182px;
@@ -920,7 +930,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media screen and (max-width: 750px) {
-  .docs-whitepaper button {
+  .docs-whitepaper {
     font-size: 18px;
     height: 30px;
     width: 160px;
@@ -1291,16 +1301,16 @@ input[type="range"]::-moz-range-thumb {
     bottom: -17%;
   }
   .home-hero-whitepaper{
-    height: 36px;
-    width: 160px;
+    height: 36px !important;
+    width: 160px !important;
   }
   .home-hero-button-social-container{
     width: 160px;
   }
-  .home-hero-whitepaper button, .home-hero-contract{
-    height: 32px;
-    width: 156px;
-    font-size: 19px;
+  .home-hero-whitepaper, .home-hero-contract{
+    height: 32px !important;
+    width: 156px !important;
+    font-size: 19px !important;
   }
   .home-hero-button-social{
     height: 30px;
@@ -1316,7 +1326,7 @@ input[type="range"]::-moz-range-thumb {
 @media screen and (max-width: 750px) {.home-hero-buttons-position{ position: absolute; left: 12vw; bottom: -17%;} .home-mobile-image{ width: 450px; margin-top: 40px !important; margin: auto; }}
 @media screen and (max-width: 722px) {.home-hero-buttons-position{ position: absolute; left: 10vw; bottom: -17%;}}
 @media screen and (max-width: 680px) {.home-hero-buttons-position{ position: absolute; left: 8vw; bottom: -17%;}}
-@media screen and (max-width: 652px) {.home-hero-buttons-position{ position: absolute; left: 10vw; bottom: -17%;}  .home-hero-whitepaper{ height: 32px; width: 140px;} .home-hero-button-social-container{ width: 140px; } .home-hero-whitepaper button, .home-hero-contract{ height: 28px; width: 136px; font-size: 16px; }}
+@media screen and (max-width: 652px) {.home-hero-buttons-position{ position: absolute; left: 10vw; bottom: -17%;}  .home-hero-whitepaper{ height: 32px !important; width: 140px !important;} .home-hero-button-social-container{ width: 140px; } .home-hero-whitepaper, .home-hero-contract{ height: 28px !important; width: 136px !important; font-size: 16px !important;}}
 @media screen and (max-width: 620px) {.home-hero-buttons-position{ position: absolute; left: 8vw; bottom: -17%;}}
 /* @media screen and (max-width: 592px) {.home-hero-buttons-position{ position: absolute; left: 8vw; bottom: -17%;}} */
 @media screen and (max-width: 592px) {.home-hero-buttons-position{ position: absolute; left: 7vw; bottom: -17%;} .home-mobile-image{ width: 400px; object-fit: contain; margin-top: 40px !important; margin: auto; }}
@@ -1324,7 +1334,7 @@ input[type="range"]::-moz-range-thumb {
 @media screen and (max-width: 544px) {.home-hero-buttons-position{ position: absolute; left: 3vw; bottom: -17%;}}
 @media screen and (max-width: 510px) {.home-hero-buttons-position{ position: absolute; left: 4vw; bottom: -25%;}}
 @media screen and (max-width: 496px) {.home-hero-buttons-position{ position: absolute; left: 5vw; bottom: -30%;}}
-@media screen and (max-width: 488px) {.home-hero-buttons-position{ position: absolute; left: 5vw; bottom: -18%;} .home-hero-whitepaper{ height: 28px; width: 120px;} .home-hero-button-social-container{ width: 120px; } .home-hero-whitepaper button,  .home-hero-contract{ height: 24px; width: 116px; font-size: 14px;} .mt{margin-top: 2px;}  .home-hero-button-social{ height: 25px;}}
+@media screen and (max-width: 488px) {.home-hero-buttons-position{ position: absolute; left: 5vw; bottom: -18%;} .home-hero-whitepaper{ height: 28px !important; width: 120px !important;} .home-hero-button-social-container{ width: 120px; } .home-hero-whitepaper,  .home-hero-contract{ height: 24px !important; width: 116px !important; font-size: 14px !important;} .mt{margin-top: 2px;}  .home-hero-button-social{ height: 25px;}}
 @media screen and (max-width: 450px) {.home-hero-buttons-position{ position: absolute; left: 5vw; bottom: -24%;}}
 @media screen and (max-width: 426px) {.home-hero-buttons-position{ position: absolute; left: 5vw; bottom: -30%;}}
 

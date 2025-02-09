@@ -23,13 +23,13 @@ function HomeHero() {
                
 
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
-                    <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[26px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
+                    <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[24px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
                     <div className=' bg-[] relative '>
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
                             {/* <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}> */}
                                 {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
-                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] flex items-center justify-center p-[0px] '}/>
+                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] home-hero-whitepaper flex items-center justify-center p-[0px] '}/>
                             {/* </div> */}
                             <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[22px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>

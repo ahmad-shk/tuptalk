@@ -86,7 +86,7 @@ useGSAP(()=>{
   return (
     <div className=''>
     <div
-      className={`cursor-pointer fixed bottom-[60px] right-[25px] z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
+      className={`cursor-pointer fixed bottom-[60px] bottomtotop right-[25px] z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
         visible ? 'block' : 'hidden'
       }`}
       onClick={scrollToTop}
@@ -179,12 +179,12 @@ useGSAP(()=>{
 
 
         <div className="dashboard-main w-[100%] scrollnone bg-[] overflow-y-auto" >
-          <div className=' rounded-l-[20px] pt-[20px] relative bg-[] h-[240px]'>
-            <img ref={dashboardImg} className='opacity-0 translate-x-[300px] absolute top-[0px] rounded-l-[20px] left-[0px] h-[100%] w-[100%] object-cover' src="/assets/dashboardhero.svg" alt="" />
+          <div className=' rounded-l-[20px] dashboard-banner pt-[20px] relative bg-[] h-[240px]'>
+            <img ref={dashboardImg} className='opacity-0 translate-x-[300px] absolute top-[0px] dashboard-banner rounded-l-[20px] left-[0px] h-[100%] w-[100%] object-cover' src="/assets/dashboardhero.svg" alt="" />
             <p className=' relative z-[2] dashboard-heading text-center font-[700] text-[24px] font-poppins leading-[36px]'>Presale Dashboard</p>
             <p className=' relative z-[2] dashboard-sub-heading text-center font-[300] text-[16px] leading-[24px] font-poppins'>Explore your transaction history.</p>
           </div>
-          <div ref={dashboardModal} className='opacity-0 w-[80%] dashboard-table-container pb-[80px] m-auto bg-[#d0d0d0] translate-y-[270px]'>
+          <div ref={dashboardModal} className='opacity-0 w-[80%] dashboard-table-container pb-[80px] m-auto bg-[white] translate-y-[270px]'>
             <div className='w-[325px] rounded-br-[100px] bg-[#F5F8FA] py-[20px] px-[20px]'>
               <div className='h-[70px] w-[70px] rounded-[50%] bg-[white] flex items-center justify-center'><img src="/assets/dashboardmadel.svg" alt="" /></div>
               <p className='font-[700] mt-[10px] text-[32px] dashboard-tupl-price font-poppins flex items-center gap-[10px]'>5.123.456 <span className='font-[400] dashboard-tupl-price text-[32px] font-poppins'>TUPL</span></p>

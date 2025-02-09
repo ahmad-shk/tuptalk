@@ -116,7 +116,7 @@ function page() {
   return (
     <div>
     <div
-      className={`cursor-pointer fixed bottom-[60px] right-[25px] z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
+      className={`cursor-pointer fixed bottom-[60px] right-[25px] bottomtotop z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
         visible ? 'block' : 'hidden'
       }`}
       onClick={scrollToTop}

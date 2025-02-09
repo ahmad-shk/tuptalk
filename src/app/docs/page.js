@@ -64,8 +64,8 @@ function page() {
             duration: 1,
             scrollTrigger: {
                 trigger: pointsCircle.current[0],
-                start: 'bottom 50%',
-                end: '1000% top',
+                start: 'bottom 20%',
+                end: ' top 40%',
                 scrub: 5,
             }
         })
@@ -76,7 +76,7 @@ function page() {
     return (
         <div>
     <div
-      className={`cursor-pointer fixed bottom-[60px] right-[25px] z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
+      className={`cursor-pointer fixed bottom-[60px] bottomtotop right-[25px] z-[9999] border-[2px] border-[#4A3AFF]  gap-[0px] min-h-[50px] max-h-[50px] min-w-[50px] max-w-[50px] rounded-[50%] flex flex-col items-center justify-center transition-opacity duration-300 ${
         visible ? 'block' : 'hidden'
       }`}
       onClick={scrollToTop}
@@ -94,7 +94,7 @@ function page() {
                     >
                         WHITEPAPER
                     </button> */}
-                    <AnimatedBtn onClick={handleDownload} style={'w-[250px] text-[30px] text-black'} label={'WHITE PAPER'} />
+                    <AnimatedBtn onClick={handleDownload} style={'h-[48px] w-[220px] docs-whitepaper flex items-center justify-center text-[28px] text-black'} label={'WHITE PAPER'} />
                 </div>
                 <p className='mt-[105px] docs-heading docs-main-heading text-[24px] text-center font-[400] font-poppins'>Import your TUPL Tokens to your MetaMask or TrustWallet</p>
                 <div className="wallet-container flex px-[8%] gap-[50px] mt-[80px]">
