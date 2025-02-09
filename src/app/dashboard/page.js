@@ -1,9 +1,13 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import NavBar from '../components/NavBar';
 import DashboardNav from '../components/DashboardNav';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { gsap } from 'gsap/gsap-core';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function page() {
   const [value, setValue] = useState(true);
@@ -11,8 +15,36 @@ function page() {
   const handleDownload = () => {
     window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
 };
+
+const wholePage = useRef(null);
+const dashboardImg = useRef(null);
+const dashboardModal = useRef(null);
+
+useGSAP(()=>{
+  gsap.to(wholePage.current, {
+    scale: 1,
+    delay: .3,
+    duration: .8,
+    transformOrigin: 'top',
+    onComplete: ()=>{
+      gsap.to(dashboardImg.current, {
+        opacity: .8,
+        x: 0,
+        duration: .4,
+        onComplete: ()=>{
+          gsap.to(dashboardModal.current, {
+            opacity: 1,
+            y: -70,
+            duration: .4
+          })
+        }
+      })
+    }
+  })
+})
+
   return (
-    <div className=''>
+    <div ref={wholePage} className='scale-0'>
       <DashboardNav setValue={setValue} value={value} />
       <div className=' bg-[] dashboard-inner w-[100%] pt-[0px] flex' style={{ height: "calc(100vh - 100px)" }}>
         <div className={`sidebar dashboard-sidebar-2 w-[315px] scrollnone overflow-y-scroll duration-700 pr-[14px] bg-[]`} >
@@ -117,11 +149,11 @@ function page() {
 
         <div className="dashboard-main w-[100%] scrollnone bg-[] overflow-y-auto" >
           <div className=' rounded-l-[20px] pt-[20px] relative bg-[] h-[240px]'>
-            <img className='absolute top-[0px] opacity-[0.8] rounded-l-[20px] left-[0px] h-[100%] w-[100%] object-cover' src="/assets/dashboardhero.svg" alt="" />
+            <img ref={dashboardImg} className='opacity-0 translate-x-[300px] absolute top-[0px] rounded-l-[20px] left-[0px] h-[100%] w-[100%] object-cover' src="/assets/dashboardhero.svg" alt="" />
             <p className=' relative z-[2] dashboard-heading text-center font-[700] text-[24px] font-poppins leading-[36px]'>Presale Dashboard</p>
             <p className=' relative z-[2] dashboard-sub-heading text-center font-[300] text-[16px] leading-[24px] font-poppins'>Explore your transaction history.</p>
           </div>
-          <div className='w-[80%] dashboard-table-container pb-[80px] m-auto bg-[white] translate-y-[-70px]'>
+          <div ref={dashboardModal} className='opacity-0 w-[80%] dashboard-table-container pb-[80px] m-auto bg-[#d0d0d0] translate-y-[270px]'>
             <div className='w-[325px] rounded-br-[100px] bg-[#F5F8FA] py-[20px] px-[20px]'>
               <div className='h-[70px] w-[70px] rounded-[50%] bg-[white] flex items-center justify-center'><img src="/assets/dashboardmadel.svg" alt="" /></div>
               <p className='font-[700] mt-[10px] text-[32px] dashboard-tupl-price font-poppins flex items-center gap-[10px]'>5.123.456 <span className='font-[400] dashboard-tupl-price text-[32px] font-poppins'>TUPL</span></p>

@@ -4,19 +4,24 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import AnimatedBtn from '../UIcomponents/animatedBtn';
 import SVGTargetAnimation from '../UIcomponents/SVGTargetAnimation';
+import GearRotater from '../UIcomponents/GearRotater';
 
 function HomeHero() {
-    const [value, setValue] = useState(50); // Initial value
+    const [value, setValue] = useState(70); // Initial value
 
     const handleChange = (e) => {
     setValue(parseInt(e.target.value, 10));
+    console.log(value);
   };
   const handleDownload = () => {
     window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
 };
     return (
         <>
-            <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto'>
+            <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto relative'>
+
+               
+
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
                     <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[26px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
                     <div className=' bg-[] relative '>
@@ -34,8 +39,10 @@ function HomeHero() {
                         </div>
                     </div>
                 </div>
-                <div className="hero-right w-[50%] flex justify-center">
-                    <div className='bg-[#F5F8FA] hero-price-indicator rounded-[30px] h-[800px] w-[88%] buy-tupl-shadow mt-[45px] py-[40px] px-[30px]'>
+                <div className="hero-right w-[50%] flex justify-center relative z-[2]">
+                <SVGTargetAnimation style={'absolute right-[-20%] bottom-[18%] opacity-[.8]'}/>
+                    <div className='bg-[#ffffff16] backdrop-blur-[4px] hero-price-indicator relative z-[] rounded-[30px] h-[800px] w-[88%] buy-tupl-shadow mt-[45px] py-[40px] px-[30px]'>
+                    
                         <div className='flex gap-[20px] justify-center items-center bg-[]'>
                             <p className='font-poppins indicator-heading font-[700] text-[32px] gradient-text'>Stage 1:</p>
                             <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>BUY TUPL NOW</p>
@@ -46,19 +53,21 @@ function HomeHero() {
                             <p className='font-[400] font-poppins text-[14px] text-[#999C9F]'>Next stage price: <span className='font-popins font-[700] text-[14px]'>$0.006</span></p>
                         </div>
                         <div className='range-container'>
-                            <div className="rangeSliderCont flex flex-col mt-[24px] rounded-[66px] h-[16px] items-center w-full bg-[#D8D8D8]">
+                            <div className="rangeSliderCont flex flex-col mt-[24px] rounded-[66px] h-[16px] relative w-full bg-[#D8D8D8]">
                                 <input
                                     type="range"
                                     min="0"
                                     max="100"
                                     value={value}
                                     onChange={handleChange}
-                                    className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none cursor-pointer"
+                                    className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none cursor-pointer relative z-[2]"
                                     style={{
                                         background: `linear-gradient(270deg, #6546C7 0%, #D339D5 100%) no-repeat`,
                                         backgroundSize: `${value}% 100%`,
+                                        visibility: 'visible'
                                     }}
                                 />
+                                <GearRotater style={`left-[${value}%]`}/>
                             </div>
                         </div>
                         <p className='font-[400] mt-[20px] font-poppins text-[14px] text-center text-[#999C9F]'>Raised: <span className='font-popins font-[700] text-[14px]'>$12,474,042.377</span></p>
@@ -96,7 +105,7 @@ function HomeHero() {
                             <p className='text-[20px] indicator-button font-poppins'>CONNECT WALLET</p>
                         </button>
                         <div className='flex justify-center'>
-                            <div className='bg-[#999C9F] mt-[18px] h-[1px] w-[90%]'></div>
+                            <div className='bg-[#999c9ff7] mt-[18px] h-[1px] w-[90%]'></div>
                         </div>
                         <div className='flex iten-center mt-[30px] cursor-pointer justify-center gap-[8px]'>
                             <img src="/assets/iicon.svg" alt="" />

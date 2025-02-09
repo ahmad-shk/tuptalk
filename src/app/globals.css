@@ -110,17 +110,13 @@ body {
 }
 
 .rangeSliderCont{
-  animation: slider .7s infinite;
+  transition: .4s;
+  &:hover{
+   box-shadow: 0px 0px 8px 3px #ff23f0;
+   transform: scale(1.04);
+  }
 }
-.rangeSliderCont::before{
-  content: '';
-  height: 100%;
-  width: 100%;
 
-}
-@keyframes slider{
-
-}
 
 .button-border {
   border: 2px solid transparent;
@@ -339,6 +335,57 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 
+
+/* ============= gear rotater ============= */
+
+/* From Uiverse.io by Shoh2008 */ 
+.gear-rotater {
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.gear-rotater::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.gear-rotater::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
 /* ============= animated Profile Btn ============= */
 
