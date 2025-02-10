@@ -114,7 +114,7 @@ function HomeRoadmap() {
                 <p ref={roadmapText} className='text-[40px] font-[700] font-popins gradient-text translate-y-[-10px] scale-0'>ROADMAP</p>
             </div>
             <div className='flex justify-center mt-[80px]'>
-                <img ref={roadmapImg} src="/assets/roadmapimg.svg" alt="" className='opacity-0 translate-y-[-100px]' />
+                <img ref={roadmapImg} src="/assets/roadmapimg.svg" alt="" className='roadmap-img opacity-0 translate-y-[-100px]' />
             </div>
             <div className=' bg-[] px-[20px] roadmap-points-wrapper flex flex-wrap gap-[10px] justify-center [&>*]:opacity-0 [&>*]:translate-y-[100px]'>
                 <div ref={(e)=>roadmapSteps.current[0]=e} className=' roadmap-point-1 translate-y-[-40%]'>
