@@ -29,7 +29,7 @@ function HomeHero() {
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
                             {/* <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}> */}
                                 {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
-                                <AnimatedBtn label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] home-hero-whitepaper flex items-center justify-center p-[0px] '}/>
+                                <AnimatedBtn onClick={handleDownload} label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] home-hero-whitepaper flex items-center justify-center p-[0px] '}/>
                             {/* </div> */}
                             <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[22px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>
