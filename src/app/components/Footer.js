@@ -12,7 +12,7 @@ function Footer(props) {
           <Link className='footer-last-two-links' href="/about"><p className='text-white font-[400] font-dmsans text-[15px]'>About</p></Link>
           <Link className='footer-last-two-links' href="/faq"><p className='text-white font-[400] font-dmsans text-[15px]'>FAQs</p></Link>
         </div>
-        <div className='flex justify-center gap-[30px] pt-[50px]'>
+        <div className='flex justify-center gap-[20px] pt-[50px]'>
           {/* <img className='cursor-pointer hover:scale-[1.3] duration-300' src="/assets/footerdiscordicon.svg" alt="" /> */}
           {/* <img className='cursor-pointer hover:scale-[1.3] duration-300' src="/assets/footerfacebookicon.svg" alt="" /> */}
           <img className='cursor-pointer hover:scale-[1.3] duration-300' src="/assets/footertwittericon.svg" alt="" />
