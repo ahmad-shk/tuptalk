@@ -10,17 +10,17 @@ function HomeHero() {
     const [value, setValue] = useState(70); // Initial value
 
     const handleChange = (e) => {
-    setValue(parseInt(e.target.value, 10));
-    console.log(value);
-  };
-  const handleDownload = () => {
-    window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
-};
+        setValue(parseInt(e.target.value, 10));
+        console.log(value);
+    };
+    const handleDownload = () => {
+        window.open('/assets/tuptalkinfo.pdf', '_blank'); // Opens the PDF in a new tab
+    };
     return (
         <>
             <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto relative'>
 
-               
+
 
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
                     <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[21px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
@@ -28,8 +28,8 @@ function HomeHero() {
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
                             {/* <div className='h-[40px] w-[190px] home-hero-whitepaper gradient-bg rounded-[14px] flex items-center justify-center' onClick={handleDownload}> */}
-                                {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
-                                <AnimatedBtn onClick={handleDownload} label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] home-hero-whitepaper flex items-center justify-center p-[0px] '}/>
+                            {/* <button className='h-[36px] text-black font-poppins w-[186px] text-[24px] rounded-[14px] bg-[white]'>WHITEPAPER</button> */}
+                            <AnimatedBtn onClick={handleDownload} label={'WHITEPAPER'} style={'text-[22px] w-[186px] h-[40px] home-hero-whitepaper flex items-center justify-center p-[0px] '} />
                             {/* </div> */}
                             <a target='blank' href="https://etherscan.io/address/0x77033DecB1d3bf00384473e34B07958044a72aD3"><button className='h-[40px] bgBtnShadow home-hero-contract mt w-[190px] mt-[8px] font-poppins text-[22px] text-white gradient-bg rounded-[14px] transition-[.3s] hover:scale-[1.1]'>CONTRACT</button></a>
                             <div className='flex  items-center home-hero-button-social-container w-[190px] justify-center mt-[10px]'>
@@ -40,9 +40,9 @@ function HomeHero() {
                     </div>
                 </div>
                 <div className="hero-right w-[50%] flex justify-center relative z-[2]">
-                {/* <SVGTargetAnimation style={'absolute right-[-20%] bottom-[18%] opacity-[.8]'}/> */}
+                    {/* <SVGTargetAnimation style={'absolute right-[-20%] bottom-[18%] opacity-[.8]'}/> */}
                     <div className='bg-[#ffffff16] backdrop-blur-[4px] hero-price-indicator relative z-[] rounded-[30px] h-[800px] w-[88%] buy-tupl-shadow mt-[45px] py-[40px] px-[30px]'>
-                    
+
                         <div className='flex gap-[20px] justify-center items-center bg-[]'>
                             <p className='font-poppins indicator-heading font-[700] text-[32px] gradient-text'>Stage 1:</p>
                             <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>Buy $Tupl Now</p>
@@ -71,10 +71,22 @@ function HomeHero() {
                             </div>
                         </div>
                         <p className='font-[400] mt-[20px] font-poppins text-[14px] text-center text-[#999C9F]'>Raised: <span className='font-popins font-[700] text-[14px]'>$12,474,042.377</span></p>
-                        <div className='flex justify-center'>
-                            <div className='bg-[#6388C9] mt-[20px] h-[1px] w-[90%]'></div>
+                        <div class="w-full">
+                            <svg
+                                viewBox="0 0 100 50"
+                                preserveAspectRatio="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-full h-16"
+                            >
+                                <path
+                                    d="M0,25 C25,0 75,50 100,25"
+                                    class="stroke-[#6388C9] fill-none"
+                                    stroke-width="1"
+                                />
+                            </svg>
                         </div>
-                        <p className='font-[400] mt-[24px] font-poppins text-[14px] text-center text-[#000000]'>1 TUPL = <span className='font-popins font-[400] text-[14px] gradient-text'>$0.005626</span></p>
+
+                        <p className='font-[400] mt-[5px] font-poppins text-[14px] text-center text-[#000000]'>1 TUPL = <span className='font-popins font-[400] text-[14px] gradient-text'>$0.005626</span></p>
                         <div className='flex justify-center gap-[30px] mt-[24px] '>
                             <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] text-[white] bg-[#7165EA]'> <img className='h-[24px]' src="/assets/eth.svg" alt="" />ETH</button>
                             <button className='bgBtnShadow h-[37px] w-[150px] flex items-center justify-center gap-[5px] rounded-[5px] border-[#9A9A9A] border-[1px] hover:bg-[#7165EA] hover:text-[white]'> <img className='h-[24px]' src="/assets/usdt.svg" alt="" />USDT</button>
