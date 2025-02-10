@@ -45,7 +45,7 @@ function HomeHero() {
 
                         <div className='flex gap-[20px] justify-center items-center bg-[]'>
                             <p className='font-poppins indicator-heading font-[700] text-[32px] gradient-text'>Stage 1:</p>
-                            <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>Buy $Tupl Now</p>
+                            <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>Buy $TUPL Now</p>
                         </div>
                         <p className='text-[#999C9F] font-Inter indicator-sub-heading text-[19px] mt-[24px] text-center'>until price increase</p>
                         <div className='flex items-center justify-between mt-[24px]'>
