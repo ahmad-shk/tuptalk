@@ -23,7 +23,7 @@ function HomeHero() {
                
 
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
-                    <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[24px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
+                    <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[21px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
                     <div className=' bg-[] relative '>
                         <img className='home-mobile-image translate-x-[20px]' src="/assets/homeheroimg.svg" alt="" />
                         <div className='translate-y-[-100%] home-hero-buttons-position translate-x-[-10%] z-[9] relative'>
@@ -45,7 +45,7 @@ function HomeHero() {
                     
                         <div className='flex gap-[20px] justify-center items-center bg-[]'>
                             <p className='font-poppins indicator-heading font-[700] text-[32px] gradient-text'>Stage 1:</p>
-                            <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>BUY TUPL NOW</p>
+                            <p className='font-poppins indicator-heading font-[400] text-[32px] gradient-text'>Buy $Tupl Now</p>
                         </div>
                         <p className='text-[#999C9F] font-Inter indicator-sub-heading text-[19px] mt-[24px] text-center'>until price increase</p>
                         <div className='flex items-center justify-between mt-[24px]'>
@@ -104,10 +104,10 @@ function HomeHero() {
                             <img className='transition-[.4s] h-[20px]' src="/assets/walleticon.svg" alt="" />
                             <p className='text-[20px] indicator-button font-poppins'>CONNECT WALLET</p>
                         </button>
-                        <div className='flex justify-center'>
+                        {/* <div className='flex justify-center'>
                             <div className='bg-[#999c9ff7] mt-[18px] h-[1px] w-[90%]'></div>
-                        </div>
-                        <div className='flex iten-center mt-[30px] cursor-pointer justify-center gap-[8px]'>
+                        </div> */}
+                        <div className='flex iten-center mt-[20px] cursor-pointer justify-center gap-[8px]'>
                             <img src="/assets/iicon.svg" alt="" />
                             <Link className='' href="/howtobuy"><p className='text-[18px] indicator-i-text text-[#7072A6]'>How To Buy</p></Link>
                         </div>
