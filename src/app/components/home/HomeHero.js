@@ -58,12 +58,12 @@ function HomeHero() {
                                     type="range"
                                     min="0"
                                     max="100"
-                                    value={value}
+                                    value={30}
                                     onChange={handleChange}
                                     className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none cursor-pointer relative z-[2]"
                                     style={{
                                         background: `linear-gradient(270deg, #6546C7 0%, #D339D5 100%) no-repeat`,
-                                        backgroundSize: `${value}% 100%`,
+                                        backgroundSize: `${30}% 100%`,
                                         visibility: 'visible'
                                     }}
                                 />
