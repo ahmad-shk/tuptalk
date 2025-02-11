@@ -109,7 +109,7 @@ function page() {
                     <div className="metamask metamask-left w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
                         <p className='font-poppins font-[600] docs-heading text-[24px] text-center mb-[90px]'>Import process using MetaMask</p>
                         <div className="relative flex flex-col items-start gap-[40px]">
-                            <div ref={e=>pointsLines.current[0]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
+                            {/* <div ref={e=>pointsLines.current[0]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div> */}
                             {/* Point 1 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
                                 <div ref={e=>pointsCircle.current[0]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
@@ -203,7 +203,7 @@ function page() {
                     <div className="trustwallet trustwallet-right w-[50%] rounded-[50px] py-[50px] px-[30px] border-[1px] border-[#9B9B9B]">
                         <p className='font-poppins font-[600] text-[24px] text-center  mb-[90px] docs-heading'>Import process using TrustWallet</p>
                         <div className="relative flex flex-col items-start gap-[40px]">
-                            <div ref={e=>pointsLines.current[1]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div>
+                            {/* <div ref={e=>pointsLines.current[1]=e} className="scale-0 absolute left-[25px] top-0 w-[2px] bg-[#738DED] h-[100%]"></div> */}
                             {/* Point 1 */}
                             <div className="flex points-gap gap-[15px] items-start relative">
                                 <div ref={e=>pointsCircle.current[4]=e} className="min-h-[51px] min-w-[51px] rounded-full flex items-center justify-center bg-[#738DED]- font-poppins font-[700] text-[24px] text-white z-10">
