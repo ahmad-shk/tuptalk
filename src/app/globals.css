@@ -189,7 +189,7 @@ input[type="range"]::-moz-range-thumb {
 /* ============= animated Btn ============= */
 
 .SVG-ray-cont{
-  height: 4px;
+  height: 2px;
   width: full;
   background-color: #e037d558;
   position: relative;
@@ -227,7 +227,7 @@ input[type="range"]::-moz-range-thumb {
   left: 0%;
   z-index: 1;
   transition: 1s;
-  animation: ray 1.5s infinite ease-in-out;
+  animation: ray 4s infinite ease-in-out;
 }
 
 @keyframes ray{
