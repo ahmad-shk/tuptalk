@@ -7,7 +7,7 @@ import SVGTargetAnimation from '../UIcomponents/SVGTargetAnimation';
 import GearRotater from '../UIcomponents/GearRotater';
 
 function HomeHero() {
-    const [value, setValue] = useState(70);
+    const [value, setValue] = useState(70); // Initial value
 
     const handleChange = (e) => {
         setValue(parseInt(e.target.value, 10));
@@ -19,6 +19,9 @@ function HomeHero() {
     return (
         <>
             <div className='px-[80px] home-wrapper flex mt-[80px] max-w-[1600px] m-auto relative'>
+
+
+
                 <div className="hero-left w-[50%] pt-[100px] bg-[]">
                     <p className='font-Inter home-hero-paragraph font-[600] italic pr-[30px] text-[21px]'>Tuptalk is a next-gen voice chat and radio broadcasting app with built-in social networking, enabling seamless communication for businesses, influencers, communities, and friends. It integrates group calling, audio conferencing, and live radio broadcasts, empowering users to expand their reach, engage audiences, and stay connected—all in one versatile platform.</p>
                     <div className=' bg-[] relative '>
@@ -57,11 +60,11 @@ function HomeHero() {
                                     max="100"
                                     value={value}
                                     onChange={handleChange}
-                                    className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none relative z-[2]"
+                                    className="w-full h-[16px] rounded-[66px] bg-[#D8D8D8] appearance-none cursor-pointer relative z-[2]"
                                     style={{
                                         background: `linear-gradient(270deg, #6546C7 0%, #D339D5 100%) no-repeat`,
-                                        backgroundSize: `25% 100%`, // Matches the fixed value
-                                        visibility: 'visible',
+                                        backgroundSize: `${value}% 100%`,
+                                        visibility: 'visible'
                                     }}
                                 />
                                 {/* <GearRotater style={`left-[${value}%]`}/> */}
@@ -85,6 +88,7 @@ function HomeHero() {
 
                         <div className='SVG-ray-cont my-8'>
                             <div className='SVG-ray'>
+
                             </div>
                         </div>
 
